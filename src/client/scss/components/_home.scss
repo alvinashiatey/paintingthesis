@@ -1,0 +1,42 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  color: #181818;
+  position: relative;
+  a,
+  a:visited,
+  a:hover,
+  a:focus {
+    color: #181818;
+  }
+  .home__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .artist__groups {
+    width: 100%;
+    display: flex;
+    gap: 10rem;
+    @media screen and (max-width: 40em) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    a {
+      h5 {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .artist {
+      margin-inline-start: 2rem;
+    }
+    // .group__1 {
+    //   .artist {
+    //   }
+    // }
+    // .group__2 {
+    //   .artist {
+    //   }
+    // }
+  }
+}
