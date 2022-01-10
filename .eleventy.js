@@ -7,7 +7,6 @@ const PATH_PREFIX = "/";
 module.exports = function (eleventyConfig) {
   const configuredMdLibrary = markdownIt({ html: true }).disable("code");
   eleventyConfig.setLibrary("md", configuredMdLibrary);
-
   const imageShortcode = require("./src/utils/images");
 
   const {
@@ -42,6 +41,8 @@ module.exports = function (eleventyConfig) {
   if (isProduction) {
     eleventyConfig.addTransform("htmlmin", htmlMinTransform);
   }
+
+  eleventyConfig.addPassthroughCopy({ "./src/font": "/assets/font" });
 
   return {
     templateFormats: ["md", "njk", "html"],

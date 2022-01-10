@@ -7,17 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title or metadata.title}}</title>
     {% block scriptLink %}{% endblock %}
-    <link
-      rel="stylesheet"
-      media="print"
-      href="/fonts/fonts.css?{{ assetHash }}"
-      onload="this.media='all'"
-    />
     {% if build.env == "production" %}
         {# Add any CSS from the main script #}
         {% viteLinkStylesheetTags "src/client/main.js" %}
         {% viteLinkModulePreloadTags "src/client/main.js" %}
     {% endif %}
+    <style>{{cssContent | safe }}</style>
 </head>
 <body>
     <main>

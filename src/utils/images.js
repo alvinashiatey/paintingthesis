@@ -1,34 +1,41 @@
 const Image = require("@11ty/eleventy-img");
+const path = require("path");
 
-async function imageShortcode(name, src, alt, sizes) {
-  //regex to clear the double quotes and back slashes of the string "\"Negro College.\".
-  const regex = /(")/g;
-  const regexAmp = /(amp;)/g;
+async function imageShortcode(
+  relativeSrc,
+  alt,
+  cls,
+  widths = [1280],
+  formats = ["jpeg"],
+  sizes = "100vw"
+) {
+  try {
+    const { dir: imgDir } = path.parse(relativeSrc);
+    const fullSrc = path.join("src", relativeSrc);
+    let metadata = await Image(fullSrc, {
+      widths,
+      formats,
+      outputDir: path.join("_site", imgDir),
+      urlPath: imgDir,
+      sharpPngOptions: {
+        progressive: true,
+        palette: true,
+      },
+    });
 
-  let metadata = await Image(src, {
-    widths: [null],
-    formats: ["png"],
-    outputDir: "./_site/img/",
-    sharpPngOptions: {
-      progressive: true,
-      palette: true,
-    },
-    filenameFormat: function (id, srcc, width, format, options) {
-      const stripName = name.replace(regex, "'");
-      const stripedName = stripName.replace(regexAmp, "");
-      return `${stripedName}.${format}`;
-    },
-  });
-
-  let imageAttributes = {
-    alt: alt.replace(regex, "'"),
-    sizes,
-    loading: "lazy",
-    decoding: "async",
-  };
-
-  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-  return Image.generateHTML(metadata, imageAttributes);
+    let highSrc = metadata.jpeg[0];
+    let imageAttributes = {
+      alt,
+      sizes,
+      class: cls,
+      height: null,
+    };
+    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+    // return Image.generateHTML(metadata, imageAttributes);
+    return `<img src="${highSrc.url}" alt="${alt}" class="${cls}" width="${highSrc.width}" />`;
+  } catch (e) {
+    console.error("Image:error", e.message);
+  }
 }
 
 module.exports = imageShortcode;

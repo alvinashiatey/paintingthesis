@@ -1,0 +1,43 @@
+@use "./components/reset";
+@use "./components/home";
+@use "./components/_artists";
+@import "./mixins/utils";
+
+body {
+  font-family: "Century-BookCondensed";
+  font-weight: normal;
+  color: #181818;
+  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+  font-size: 62.5%;
+  padding-top: 2rem;
+  padding-inline: 2rem;
+  main {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+a,
+a:visited,
+a:active {
+  cursor: pointer;
+  text-decoration: none;
+  color: royalblue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Century-BookCondensed";
+  font-weight: normal;
+  color: #181818;
+  margin: 0;
+  padding: 0;
+  line-height: 120%;
+}
