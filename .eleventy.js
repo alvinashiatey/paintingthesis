@@ -43,6 +43,7 @@ module.exports = function (eleventyConfig) {
   }
 
   eleventyConfig.addPassthroughCopy({ "./src/font": "/assets/font" });
+  eleventyConfig.addPassthroughCopy("./src/threeasset");
 
   return {
     templateFormats: ["md", "njk", "html"],
