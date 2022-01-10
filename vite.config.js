@@ -8,7 +8,7 @@ export default defineConfig({
     sourceMap: true,
     manifest: true,
     rollupOptions: {
-      input: "/src/client/main.js",
+      input: "/src/client/index.js",
     },
   },
 });

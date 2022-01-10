@@ -9,6 +9,22 @@
   a:focus {
     color: #181818;
   }
+
+  #c {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: hue-rotate(5deg) saturate(250%) contrast(175%);
+    z-index: 999;
+  }
+
   .home__header {
     display: flex;
     justify-content: space-between;
