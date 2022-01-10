@@ -7,16 +7,38 @@ body {
   font-family: "Century-BookCondensed";
   font-weight: normal;
   color: #181818;
+  // background-color: ;
   width: 100vw;
+  height: 100vh;
   max-width: 100%;
   margin: 0;
   font-size: 62.5%;
-  padding-top: 2rem;
-  padding-inline: 2rem;
+
   main {
     font-size: 1rem;
     margin: 0;
     padding: 0;
+  }
+
+  canvas {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: hue-rotate(5deg) saturate(250%) contrast(175%);
+    z-index: 999;
+    pointer-events: none;
+    // @media screen and (max-width: 60em) {
+    //   position: relative;
+    //   height: 10rem;
+    //   top: 0;
+    // }
   }
 }
 
@@ -25,7 +47,11 @@ a:visited,
 a:active {
   cursor: pointer;
   text-decoration: none;
-  color: royalblue;
+  // color: #fefefe;
+  color: #181818;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 h1,
@@ -36,7 +62,6 @@ h5,
 h6 {
   font-family: "Century-BookCondensed";
   font-weight: normal;
-  color: #181818;
   margin: 0;
   padding: 0;
   line-height: 120%;

@@ -9,6 +9,17 @@
 
   .artist__header {
     height: var(--header_height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .image__logo {
+      width: 20rem;
+      a {
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
   .artists__wrapper {
     display: flex;
@@ -60,6 +71,20 @@
       .artist__name {
         h1 {
           font-size: 2rem;
+        }
+      }
+
+      a {
+        @media screen and (max-width: 60em) {
+          font-size: 1.5rem;
+        }
+      }
+
+      p {
+        font-size: 1.2vw;
+        line-height: 120%;
+        @media screen and (max-width: 60em) {
+          font-size: 1.5rem;
         }
       }
     }

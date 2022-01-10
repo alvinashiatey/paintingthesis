@@ -35,7 +35,8 @@ init();
 
 function init() {
   container = document.createElement("div");
-  document.body.appendChild(container);
+  container.className = "three_container";
+  document.body.prepend(container);
 
   camera = new THREE.PerspectiveCamera(
     45,

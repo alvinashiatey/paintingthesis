@@ -18,7 +18,10 @@ eleventyComputed:
 
 <div class="artists">
   <div class="artist__header">
-    <a href="/"><h1>Back</h1></a>
+    <div class="image__logo">
+      <a href="/"> <img src="../../assets/images/logo__vertical.jpg" alt=""> </a>
+    </div>
+    <a href="{{ pagination.href.next }}"><h1>Next</h1></a>
   </div>
   <div {% if artist.group == 2 %} class="artists__wrapper second"{% else %}class="artists__wrapper"{% endif %}>
     {%- if artist.group == 2 -%}

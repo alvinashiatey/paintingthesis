@@ -44,6 +44,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "./src/font": "/assets/font" });
   eleventyConfig.addPassthroughCopy("./src/threeasset");
+  eleventyConfig.addPassthroughCopy({ "./src/images": "/assets/images" });
 
   return {
     templateFormats: ["md", "njk", "html"],

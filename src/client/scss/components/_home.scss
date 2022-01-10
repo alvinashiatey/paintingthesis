@@ -1,41 +1,33 @@
 .home {
   width: 100%;
   height: 100vh;
-  color: #181818;
   position: relative;
-  a,
-  a:visited,
-  a:hover,
-  a:focus {
-    color: #181818;
-  }
-
-  #c {
-    display: block;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: hue-rotate(5deg) saturate(250%) contrast(175%);
-    z-index: 999;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+  font-size: 1.75rem;
+  padding-inline: 2rem;
 
   .home__header {
-    display: flex;
-    justify-content: space-between;
+    columns: 2;
+    // & > * {
+    //   display: inline-block;
+    // }
+    @media screen and (max-width: 40em) {
+      columns: 1;
+    }
   }
   .artist__groups {
     width: 100%;
-    display: flex;
-    gap: 10rem;
-    @media screen and (max-width: 40em) {
-      flex-direction: column;
-      gap: 2rem;
+    columns: 2;
+    margin-top: 2rem;
+    @media screen and (max-width: 60em) {
+      columns: 1;
+
+      .group__2 {
+        margin-top: 2rem;
+      }
     }
     a {
       h5 {
@@ -46,13 +38,5 @@
     .artist {
       margin-inline-start: 2rem;
     }
-    // .group__1 {
-    //   .artist {
-    //   }
-    // }
-    // .group__2 {
-    //   .artist {
-    //   }
-    // }
   }
 }
