@@ -28,8 +28,7 @@ var za = 0;
 if (window.innerWidth <= 1050) {
   isMoblie = true;
 }
-
-init();
+var canvas = document.querySelector("#c");
 
 function init() {
   container = document.createElement("div");
@@ -87,7 +86,6 @@ function init() {
 
   function onError() {}
 
-  var canvas = document.querySelector("#c");
   renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
   renderer.setClearColor(0xffffff, 0);
   renderer.setPixelRatio(window.devicePixelRatio);
@@ -139,4 +137,7 @@ function render() {
 
 document.addEventListener("mousemove", onDocumentMouseMove);
 
-render();
+if (canvas) {
+  init();
+  render();
+}

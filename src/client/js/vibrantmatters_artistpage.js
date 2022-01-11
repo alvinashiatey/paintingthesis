@@ -25,11 +25,11 @@ var za = 0;
 
 var bubs = [];
 
-if ($(window).width() <= 1050) {
+if (window.innerWidth <= 1050) {
   isMoblie = true;
 }
 
-init();
+var canvas = document.querySelector("#c2");
 
 function init() {
   container = document.createElement("div");
@@ -60,15 +60,15 @@ function init() {
   }
 
   var texloader = new THREE.TextureLoader();
-  texloader.load("../threeasset/bubble.png", function (texture) {
-    sphere = new THREE.SphereGeometry(1, 32, 16);
-    material = new THREE.MeshStandardMaterial({
+  texloader.load("../../threeasset/bubble.png", function (texture) {
+    let sphere = new THREE.SphereGeometry(1, 32, 16);
+    let material = new THREE.MeshStandardMaterial({
       map: texture,
       transparent: true,
     });
     var counter = 0;
     var resetCounter = function () {
-      for (i = 0; i < bubs.length; i++) {
+      for (let i = 0; i < bubs.length; i++) {
         scene.remove(bubs[i]);
       }
       bubs = [];
@@ -80,7 +80,7 @@ function init() {
     });
     setInterval(function () {
       counter += 1;
-      if (counter > 1) {
+      if (counter > 10) {
         let bub = new THREE.Mesh(sphere, material);
         let bx = Math.random().map(0, 1, -15, 15);
         let by = Math.random().map(0, 1, -10, 10);
@@ -88,7 +88,7 @@ function init() {
         bub.position.set(bx, by, bz);
         bub.scale.set(0.55, 0.55, 0.55);
         bubs.push(bub);
-        for (i = 0; i < bubs.length; i++) {
+        for (let i = 0; i < bubs.length; i++) {
           scene.add(bubs[i]);
         }
       }
@@ -103,7 +103,6 @@ function init() {
 
   function onError() {}
 
-  var canvas = document.querySelector("#c");
   renderer = new THREE.WebGLRenderer({
     canvas,
     alpha: true,
@@ -170,4 +169,7 @@ function render() {
 
 document.addEventListener("mousemove", onDocumentMouseMove);
 
-render();
+if (canvas) {
+  init();
+  render();
+}
