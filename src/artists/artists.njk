@@ -50,7 +50,7 @@ eleventyComputed:
         </div>
         <div class="artist__bio">
           {% set bio = artist.bio | replace('//n', '<br>') %}
-          <p>{{bio}}</p>
+          <p>{{bio | safe}}</p>
         </div>
       </div> 
     {%- else -%}
