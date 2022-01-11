@@ -7,7 +7,7 @@ const PATH_PREFIX = "/";
 module.exports = function (eleventyConfig) {
   const configuredMdLibrary = markdownIt({ html: true }).disable("code");
   eleventyConfig.setLibrary("md", configuredMdLibrary);
-  const videoShortCode = require("./src/utils/videoShortCode");
+  const imageShortcode = require("./src/utils/images");
 
   const {
     viteLegacyScriptTag,
@@ -29,7 +29,7 @@ module.exports = function (eleventyConfig) {
     "viteLinkModulePreloadTags",
     viteLinkModulePreloadTags
   );
-  eleventyConfig.addNunjucksAsyncShortcode("video", videoShortCode);
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
   // Transforms
   const htmlMinTransform = require("./src/transforms/html-min-transform.js");
@@ -48,10 +48,8 @@ module.exports = function (eleventyConfig) {
 
   return {
     templateFormats: ["md", "njk", "html"],
-    pathPrefix: PATH_PREFIX,
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk",
     passthroughFileCopy: true,
     dir: {
       input: INPUT_DIR,

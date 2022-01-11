@@ -1,4 +1,3 @@
-const { AssetCache } = require("@11ty/eleventy-cache-assets");
 const Cache = require("@11ty/eleventy-cache-assets");
 const Arena = require("are.na");
 const sharp = require("sharp");
@@ -13,7 +12,7 @@ module.exports = async function () {
     arena
       .channel("ppm-media-7_ey3tydmye")
       .get({ per: 100 })
-      .then(async (chan) => {
+      .then((chan) => {
         chan.contents.map(async (item) => {
           if (item.image === null) return;
           let url = item.image.original.url;

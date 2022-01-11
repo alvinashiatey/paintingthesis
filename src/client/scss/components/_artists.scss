@@ -15,10 +15,6 @@
     justify-content: space-between;
     align-items: center;
     padding-inline: 2rem;
-    padding-inline: 2rem;
-    @media screen and (max-width: 40em) {
-      padding-inline: 1rem;
-    }
     .image__logo {
       width: 22rem;
       a {
@@ -36,7 +32,6 @@
     height: 100%;
     @media screen and (max-width: 60em) {
       flex-direction: column;
-      padding-inline: 1rem;
     }
     &.second {
       @media screen and (max-width: 60em) {
@@ -69,12 +64,9 @@
           .work {
             width: 100%;
           }
-        }
-        .artist__video {
-          margin-top: 2rem;
-          video {
-            width: 100%;
-          }
+          // .caption {
+          // font-size: 0.7rem;
+          // }
         }
       }
     }
@@ -93,7 +85,7 @@
       }
 
       p {
-        font-size: 2.1vmin;
+        font-size: 2.25vmin;
         line-height: 120%;
         @media screen and (max-width: 60em) {
           font-size: 1.5rem;
