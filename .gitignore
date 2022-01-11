@@ -127,3 +127,4 @@ _site
 .pnp.*
 
 .DS_Store
+src/.DS_Store

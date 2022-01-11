@@ -18,25 +18,30 @@
       columns: 1;
     }
   }
-  .artist__groups {
-    width: 100%;
-    columns: 2;
+  .groups {
     margin-top: 2rem;
-    @media screen and (max-width: 60em) {
-      columns: 1;
-
-      .group__2 {
-        margin-top: 2rem;
+    .artist__groups {
+      width: 100%;
+      columns: 2;
+      @media screen and (max-width: 60em) {
+        columns: 1;
+        .group__1,
+        .group__2 {
+          margin-top: 2rem;
+        }
       }
-    }
-    a {
-      h5 {
-        padding: 0;
-        margin: 0;
+      a {
+        h5 {
+          padding: 0;
+          margin: 0;
+        }
       }
-    }
-    .artist {
-      margin-inline-start: 2rem;
+      .artist {
+        margin-inline-start: 2rem;
+      }
+      .group__1 {
+        display: inline-block;
+      }
     }
   }
 }

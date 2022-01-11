@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-inline: 2rem;
     .image__logo {
       width: 20rem;
       a {
@@ -81,7 +82,7 @@
       }
 
       p {
-        font-size: 1.2vw;
+        font-size: 2.019vmin;
         line-height: 120%;
         @media screen and (max-width: 60em) {
           font-size: 1.5rem;
