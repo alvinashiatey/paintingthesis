@@ -28,8 +28,7 @@ var za = 0;
 if (window.innerWidth <= 1050) {
   isMoblie = true;
 }
-
-init();
+var canvas = document.querySelector("#c");
 
 function init() {
   container = document.createElement("div");
@@ -61,20 +60,6 @@ function init() {
     }
   }
 
-  //   var texloader = new THREE.TextureLoader();
-  //   texloader.load("texture.png", function (texture) {
-  //     // texture.preload();
-  //     geo = new THREE.PlaneBufferGeometry(250, 250);
-  //     material = new THREE.MeshStandardMaterial({
-  //       map: texture,
-  //       transparent: true,
-  //     });
-  //     let geom = new THREE.Mesh(geo, material);
-  //     geom.position.set(0, 0, 0);
-  //     geom.scale.set(0.1, 0.1, 0.1);
-  //     // scene.add(geom);
-  //   });
-
   new MTLLoader().load("../threeasset/test.mtl", function (materials) {
     materials.preload();
     new OBJLoader()
@@ -101,7 +86,6 @@ function init() {
 
   function onError() {}
 
-  var canvas = document.querySelector("#c");
   renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
   renderer.setClearColor(0xffffff, 0);
   renderer.setPixelRatio(window.devicePixelRatio);
@@ -153,4 +137,7 @@ function render() {
 
 document.addEventListener("mousemove", onDocumentMouseMove);
 
-render();
+if (canvas) {
+  init();
+  render();
+}
