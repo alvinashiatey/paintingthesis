@@ -5,11 +5,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 4rem;
+  padding-bottom: 2.75rem;
   font-size: 1.75rem;
   padding-inline: 2rem;
 
   .home__header {
+    padding-top: 1.5rem;
     columns: 2;
     // & > * {
     //   display: inline-block;
@@ -21,6 +22,7 @@
   .groups {
     margin-top: 2rem;
     .artist__groups {
+      margin-top: 2rem;
       width: 100%;
       columns: 2;
       @media screen and (max-width: 60em) {
@@ -37,7 +39,10 @@
         }
       }
       .artist {
-        margin-inline-start: 2rem;
+        // display: inline-block;
+        float: left;
+        clear: both;
+        margin-inline-start: 2.5rem;
       }
       .group__1 {
         display: inline-block;

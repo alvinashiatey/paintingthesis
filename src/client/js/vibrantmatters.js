@@ -124,7 +124,7 @@ function onWindowResize() {
 
   renderer.setSize(window.innerWidth, window.innerHeight);
 
-  ratio = $(window).width() / $(window).height();
+  ratio = window.innerWidth / window.innerHeight;
 }
 
 function onDocumentMouseMove(event) {
@@ -144,7 +144,7 @@ function render() {
   target.x += (mouseX - target.x) * 0.00025;
   target.y += (-mouseY - target.y) * 0.00025;
   target.z = camera.position.z;
-  if (object) {
+  if (object && camera.position.z >= 1) {
     object.lookAt(target);
   }
   requestAnimationFrame(render);

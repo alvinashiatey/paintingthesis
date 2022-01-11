@@ -15,7 +15,7 @@ body {
   font-size: 62.5%;
 
   main {
-    font-size: 1rem;
+    font-size: 1.125rem;
     margin: 0;
     padding: 0;
   }
@@ -50,7 +50,8 @@ a:active {
   // color: #fefefe;
   color: #181818;
   &:hover {
-    text-decoration: underline;
+    text-decoration: underline 2px;
+    text-underline-offset: 2.25px;
   }
 }
 
@@ -64,5 +65,5 @@ h6 {
   font-weight: normal;
   margin: 0;
   padding: 0;
-  line-height: 120%;
+  line-height: 115%;
 }
