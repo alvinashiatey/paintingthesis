@@ -15,7 +15,7 @@ eleventyComputed:
   cssContent: '@font-face { font-family: "Century-BookCondensed"; src: url(../../assets/font/Century-BookCondensed.ttf) format("truetype"); font-weight: normal; font-display: swap;}'
 ---
 {% set cssBlock =  '@font-face { font-family: "Century-BookCondensed"; src: url(../../assets/font/Century-BookCondensed.ttf) format("truetype"); font-weight: normal; font-display: swap;}'%}
-
+<canvas id="c2"></canvas>
 <div class="artists">
   <div class="artist__header">
     <div class="image__logo">
@@ -50,7 +50,7 @@ eleventyComputed:
         </div>
         <div class="artist__bio">
           {% set bio = artist.bio | replace('//n', '<br>') %}
-          <p>{{bio | safe}}</p>
+          <p>{{bio}}</p>
         </div>
       </div> 
     {%- else -%}
@@ -76,14 +76,6 @@ eleventyComputed:
             {% set src = "images/" + key.split(" ").join("-").toLowerCase().trim() + ".jpg" %}
             <div class="artist__img">
               <img src="{{src}}" alt="{{caption}}" class="work"/>
-              <p class="caption">{{caption}}</p>
-            </div>
-          {%- endfor -%}
-          {%- for key, caption in artist.videos -%}
-            {% set vidSRC = key.split(" ").join("-").toLowerCase().trim() + ".mp4" %}
-            {% set videosArray = videos %}
-            <div class="artist__video">
-              {% video videosArray, vidSRC %}
               <p class="caption">{{caption}}</p>
             </div>
           {%- endfor -%}
