@@ -61,20 +61,6 @@ function init() {
     }
   }
 
-  //   var texloader = new THREE.TextureLoader();
-  //   texloader.load("texture.png", function (texture) {
-  //     // texture.preload();
-  //     geo = new THREE.PlaneBufferGeometry(250, 250);
-  //     material = new THREE.MeshStandardMaterial({
-  //       map: texture,
-  //       transparent: true,
-  //     });
-  //     let geom = new THREE.Mesh(geo, material);
-  //     geom.position.set(0, 0, 0);
-  //     geom.scale.set(0.1, 0.1, 0.1);
-  //     // scene.add(geom);
-  //   });
-
   new MTLLoader().load("../threeasset/test.mtl", function (materials) {
     materials.preload();
     new OBJLoader()
