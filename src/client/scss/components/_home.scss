@@ -8,9 +8,17 @@
   padding-bottom: 4rem;
   font-size: 1.75rem;
   padding-inline: 2rem;
+  @media screen and (max-width: 40em) {
+    padding-inline: 1rem;
+    font-size: 1.2rem;
+  }
 
   .home__header {
     columns: 2;
+
+    .ppte {
+      display: inline-block;
+    }
     // & > * {
     //   display: inline-block;
     // }
