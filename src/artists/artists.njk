@@ -19,7 +19,7 @@ eleventyComputed:
 <div class="artists">
   <div class="artist__header">
     <div class="image__logo">
-      <a href="/"> <img src="../../assets/images/logo__vertical.jpg" alt=""> </a>
+      <a href="/"> <img src="../../assets/images/logo__vertical.png" alt=""> </a>
     </div>
     <a href="{{ pagination.href.next }}"><h1>Next</h1></a>
   </div>
@@ -49,7 +49,8 @@ eleventyComputed:
           </div>
         </div>
         <div class="artist__bio">
-          <p>{{artist.bio}}</p>
+          {% set bio = artist.bio | replace('//n', '<br>') %}
+          <p>{{bio}}</p>
         </div>
       </div> 
     {%- else -%}
@@ -65,7 +66,8 @@ eleventyComputed:
           </div>
         </div>
         <div class="artist__bio">
-          <p>{{artist.bio}}</p>
+          {% set bio = artist.bio | replace('//n', '<br>') %}
+          <p>{{bio |safe}}</p>
         </div>
       </div> 
       <div class="artist__works">
@@ -73,7 +75,6 @@ eleventyComputed:
           {%- for key, caption in artist.images -%}
             {% set src = "images/" + key.split(" ").join("-").toLowerCase().trim() + ".jpg" %}
             <div class="artist__img">
-              {# {% image src, caption, "work" %} #}
               <img src="{{src}}" alt="{{caption}}" class="work"/>
               <p class="caption">{{caption}}</p>
             </div>

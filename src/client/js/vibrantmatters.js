@@ -25,13 +25,11 @@ var zoomingIn = true;
 
 var za = 0;
 
-// if ($(window).width() <= 1050) {
-//   isMoblie = true;
-// }
+if (window.innerWidth <= 1050) {
+  isMoblie = true;
+}
 
 init();
-// animate();
-// render();
 
 function init() {
   container = document.createElement("div");
@@ -44,7 +42,11 @@ function init() {
     1,
     1000
   );
-  camera.position.z = 1.75;
+  if (isMoblie == false) {
+    camera.position.z = 1.75;
+  } else {
+    camera.position.z = 8;
+  }
 
   scene = new THREE.Scene();
   scene.add(camera);
@@ -81,7 +83,6 @@ function init() {
         obj.position.x = -1;
         obj.position.y = -2;
         obj.position.z = 2;
-        // object.scale.set(0.052, 0.052, 0.052);
         obj.scale.set(0.052, 0.052, 0.052);
         var texture = new THREE.TextureLoader().load(
           "../threeasset/bubble.png"
@@ -129,20 +130,20 @@ function onWindowResize() {
 function onDocumentMouseMove(event) {
   mouseX = (event.clientX - windowHalfX) / 2;
   mouseY = (event.clientY - windowHalfY) / 2;
-  // console.log(mouseX);
 }
 
 function render() {
-  if (zoomingIn && camera.position.z >= 0 && camera.position.z < 49) {
-    camera.position.z += za;
-    za += 0.002;
-  } else {
-    zoomingIn = false;
+  if (isMoblie == false) {
+    if (zoomingIn && camera.position.z >= 0 && camera.position.z < 49) {
+      camera.position.z += za;
+      za += 0.002;
+    } else {
+      zoomingIn = false;
+    }
   }
-  target.x += (mouseX - target.x) * 0.000075;
-  target.y += (-mouseY - target.y) * 0.000075;
+  target.x += (mouseX - target.x) * 0.00025;
+  target.y += (-mouseY - target.y) * 0.00025;
   target.z = camera.position.z;
-  // console.log(target.x);
   if (object) {
     object.lookAt(target);
   }
