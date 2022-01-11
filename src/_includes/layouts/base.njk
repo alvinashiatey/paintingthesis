@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title or metadata.title}}</title>
+    <link rel="icon"  {% if page.url == '/'%} href="/assets/images/favicon.png" {% else %} href="../../assets/images/favicon.png" {% endif %} type="image/png" />
     {% block scriptLink %}{% endblock %}
     {% if build.env == "production" %}
         {# Add any CSS from the main script #}
