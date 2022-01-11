@@ -50,7 +50,7 @@ eleventyComputed:
         </div>
         <div class="artist__bio">
           {% set bio = artist.bio | replace('//n', '<br>') %}
-          <p>{{bio}}</p>
+          <p>{{bio | safe}}</p>
         </div>
       </div> 
     {%- else -%}
@@ -76,6 +76,14 @@ eleventyComputed:
             {% set src = "images/" + key.split(" ").join("-").toLowerCase().trim() + ".jpg" %}
             <div class="artist__img">
               <img src="{{src}}" alt="{{caption}}" class="work"/>
+              <p class="caption">{{caption}}</p>
+            </div>
+          {%- endfor -%}
+          {%- for key, caption in artist.videos -%}
+            {% set vidSRC = key.split(" ").join("-").toLowerCase().trim() + ".mp4" %}
+            {% set videosArray = videos %}
+            <div class="artist__video">
+              {% video videosArray, vidSRC %}
               <p class="caption">{{caption}}</p>
             </div>
           {%- endfor -%}
