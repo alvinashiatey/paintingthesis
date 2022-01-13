@@ -35,6 +35,14 @@ eleventyComputed:
               <p class="caption">{{caption}}</p>
             </div>
           {%- endfor -%}
+          {%- for key, caption in artist.videos -%}
+            {% set vidSRC = key.split(" ").join("-").toLowerCase().trim() + ".mp4" %}
+            {% set videosArray = videos %}
+            <div class="artist__video">
+              {% video videosArray, vidSRC %}
+              <p class="caption">{{caption}}</p>
+            </div>
+          {%- endfor -%}
         </div>
       </div>
       <div class="artist__container">
@@ -76,6 +84,14 @@ eleventyComputed:
             {% set src = "images/" + key.split(" ").join("-").toLowerCase().trim() + ".jpg" %}
             <div class="artist__img">
               <img src="{{src}}" alt="{{caption}}" class="work"/>
+              <p class="caption">{{caption}}</p>
+            </div>
+          {%- endfor -%}
+          {%- for key, caption in artist.videos -%}
+            {% set vidSRC = key.split(" ").join("-").toLowerCase().trim() + ".mp4" %}
+            {% set videosArray = videos %}
+            <div class="artist__video">
+              {% video videosArray, vidSRC %}
               <p class="caption">{{caption}}</p>
             </div>
           {%- endfor -%}
