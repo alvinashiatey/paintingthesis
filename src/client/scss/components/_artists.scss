@@ -15,12 +15,10 @@
     justify-content: space-between;
     align-items: center;
     padding-inline: 2rem;
-    padding-inline: 2rem;
-    @media screen and (max-width: 40em) {
+    @media screen and (max-width: 60em) {
       padding-inline: 1rem;
     }
     .image__logo {
-      width: 22rem;
       a {
         img {
           width: 100%;
