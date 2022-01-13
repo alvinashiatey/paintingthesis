@@ -21,7 +21,7 @@ eleventyComputed:
     <div class="image__logo">
       <a href="/"> <h1>Vibrant Matters</h1> </a>
     </div>
-    <a href="{{ pagination.href.next }}"><h1>Next</h1></a>
+    <a {% if artist.name == "Justin James Voiss"%} href="/" ><h1>Home</h1></a> {% else %} href="{{ pagination.href.next }}" ><h1>Next</h1></a> {% endif %}
   </div>
   <div {% if artist.group == 2 %} class="artists__wrapper second"{% else %}class="artists__wrapper"{% endif %}>
     {%- if artist.group == 2 -%}
