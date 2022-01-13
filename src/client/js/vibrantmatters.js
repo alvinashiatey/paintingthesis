@@ -138,6 +138,7 @@ function render() {
 document.addEventListener("mousemove", onDocumentMouseMove);
 
 if (canvas) {
+  console.log("canvas", canvas);
   init();
   render();
 }
