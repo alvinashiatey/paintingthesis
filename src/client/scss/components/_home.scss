@@ -13,13 +13,19 @@
     font-size: 1.2rem;
   }
 
+  h1,
+  h2 {
+    font-size: 2.5rem;
+  }
+
   .home__header {
     padding-top: 1.5rem;
     columns: 2;
 
-    .ppte {
+    .home__link {
       display: inline-block;
     }
+
     @media screen and (max-width: 60em) {
       columns: 1;
     }
@@ -32,6 +38,7 @@
       columns: 2;
       @media screen and (max-width: 60em) {
         columns: 1;
+        padding-block-end: 1.5rem;
         .group__1,
         .group__2 {
           margin-top: 2rem;
@@ -47,7 +54,11 @@
         // display: inline-block;
         float: left;
         clear: both;
-        margin-inline-start: 2.5rem;
+        line-height: 120%;
+        padding-block-end: 0.9rem;
+        @media screen and (max-width: 60em) {
+          margin-inline-start: 0;
+        }
       }
       .group__1 {
         display: inline-block;

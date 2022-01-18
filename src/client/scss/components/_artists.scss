@@ -8,6 +8,10 @@
     height: auto;
   }
 
+  .caption {
+    font-size: 1rem;
+  }
+
   .artist__header {
     height: var(--header_height);
     display: flex;
@@ -18,13 +22,13 @@
     @media screen and (max-width: 60em) {
       padding-inline: 1rem;
     }
-    // .vm__identity {
-    //   a {
-    //     h1 {
-    //       font-size: 2em;
-    //     }
-    //   }
-    // }
+    .vm__identity {
+      a {
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    }
     .next__artist a {
       font-size: 1.75rem;
       line-height: 120%;
@@ -48,6 +52,7 @@
         flex-direction: column-reverse;
       }
     }
+
     .artist__works {
       flex: 1;
       gap: 2rem;
@@ -81,6 +86,9 @@
             width: 100%;
           }
         }
+        .caption {
+          font-size: 1rem;
+        }
       }
     }
     .artist__container {
@@ -94,6 +102,7 @@
         overflow-y: scroll;
         padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
         box-sizing: content-box; /* So the width will be 100% + 17px */
+
         .artist__name {
           h1 {
             font-size: 2.5rem;
@@ -102,9 +111,6 @@
         .artist__bio {
           font-size: 1.75rem;
           line-height: 120%;
-          @media screen and (max-width: 60em) {
-            font-size: 1.5rem;
-          }
         }
       }
     }
