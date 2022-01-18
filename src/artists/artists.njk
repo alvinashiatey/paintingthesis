@@ -18,10 +18,12 @@ eleventyComputed:
 <canvas id="c2"></canvas>
 <div class="artists">
   <div class="artist__header">
-    <div class="image__logo">
+    <div class="vm__identity">
       <a href="/"> <h1>Vibrant Matters</h1> </a>
     </div>
-    <a {% if artist.name == "Justin James Voiss"%} href="/" ><h1>Home</h1></a> {% else %} href="{{ pagination.href.next }}" ><h1>Next</h1></a> {% endif %}
+    <div class="next__artist">
+      <a {% if artist.name == "Justin James Voiss"%} href="/" ><h1>Home</h1></a> {% else %} href="{{ pagination.href.next }}" ><p>Next Artist →</p></a> {% endif %}
+    </div>
   </div>
   <div {% if artist.group == 2 %} class="artists__wrapper second"{% else %}class="artists__wrapper"{% endif %}>
     {%- if artist.group == 2 -%}
@@ -46,36 +48,57 @@ eleventyComputed:
         </div>
       </div>
       <div class="artist__container">
-        <div class="artist__name">
-          <h1>{{artist.name}}</h1>
-        </div>
-        <div class="artists__info">
-          <p>{{artist.dob}}</p>
-          <div class="social">
-            <a href="{{artist.social.instagram.url}}" target="_blank">{{artist.social.instagram.username}}</a><br>
-            <a href="{{artist.social.web.url}}" target="_blank">{{artist.social.web.url}}</a>
+        <div class="artist__wrapper">
+          <div class="artist__name">
+            <h1>{{artist.name}}</h1>
+            {% if artist.dob %}
+              <div class="dob">
+                <p>{{artist.dob}}</p>
+              </div>
+            {% endif %}
+            <br>
           </div>
-        </div>
-        <div class="artist__bio">
-          {% set bio = artist.bio | replace('//n', '<br>') %}
-          <p>{{bio}}</p>
+          <div class="artist__bio">
+            {% set bio = artist.bio | replace('//n', '<br>') %}
+            <p>{{ bio | safe }}</p>
+          </div>
+          <div class="artists__info">
+            <br>
+            <div class="social">
+              <a href="{{artist.social.instagram.url}}" target="_blank">{{artist.social.instagram.username}}</a><br>
+              <a href="{{artist.social.web.url}}" target="_blank">{{artist.social.web.url}}</a>
+            </div>
+          </div>
         </div>
       </div> 
     {%- else -%}
       <div class="artist__container">
-        <div class="artist__name">
-          <h1>{{artist.name}}</h1>
-        </div>
-        <div class="artists__info">
-          <p>{{artist.dob}}</p>
-          <div class="social">
-            <a href="{{artist.social.instagram.url}}" target="_blank">{{artist.social.instagram.username}}</a><br>
-            <a href="{{artist.social.web.url}}" target="_blank">{{artist.social.web.url}}</a>
+        <div class="artist__wrapper">
+          <div class="artist__name">
+            <h1>{{artist.name}}</h1>
+            {% if artist.dob %}
+              <div class="dob">
+                <p>{{artist.dob}}</p>
+              </div>
+            {% endif %}
+            <br>
           </div>
-        </div>
-        <div class="artist__bio">
-          {% set bio = artist.bio | replace('//n', '<br>') %}
-          <p>{{bio |safe}}</p>
+          <div class="artist__bio">
+            {% set bio = artist.bio | replace('//n', '<br>') %}
+            <p>{{ bio | safe }}</p>
+          </div>
+          <div class="artists__info">
+            <br>
+            
+              <div class="social">
+            {% if artist.social.instagram.username %}
+              <a href="{{artist.social.instagram.url}}" target="_blank">{{artist.social.instagram.username}}</a><br>
+            {% endif %}
+            {% if artist.social.web.url %}
+              <a href="{{artist.social.web.url}}" target="_blank">{{artist.social.web.name}}</a>
+            {% endif %}
+            </div>
+          </div>
         </div>
       </div> 
       <div class="artist__works">

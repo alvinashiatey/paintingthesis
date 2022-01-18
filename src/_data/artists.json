@@ -1,7 +1,7 @@
 [
   {
     "name": "Rachael Catharine Anderson",
-    "dob": "b. 1990, Columbus, Ohio",
+    "dob": null,
     "group": 1,
     "social": {
       "instagram": {
@@ -12,7 +12,7 @@
         "url": null
       }
     },
-    "bio": "I make oil paintings from observation of peripheral subjects such as compost piles, rewilded vegetation, discarded machinery, vernal ponds, and nighttime in order to engage with the beauty of nonhuman beings and materials.  I often use dramatic lighting and technological intervention with my subjects as tools to animate them.   Dramatically depicting other lifeforms and ecosystems is not only a way to inspire wonder about them—it is also a vehicle to inspire care for our environment.",
+    "bio": "When I encounter strange and beautiful design in nature, I am moved to represent it in oil paintings.  I find that when I render these objects and inert living bodies in paint, I can capture their not-so-obvious auras.  Painting from life is a celebration of how a simple mixture of oil and pigment can reproduce and amplify natural phenomena.",
     "images": {
       "01 Rachael Catharine Anderson": "Permaculture Nocturne, 2021. Oil on canvas; 130 x 96 in. Photo: Etienne Frossard.",
 
@@ -26,7 +26,7 @@
   },
   {
     "name": "Salvador Andrade Arévalo",
-    "dob": "b. La Barca, Jalisco, México",
+    "dob": "b. Jalisco, México",
     "group": 2,
     "social": {
       "instagram": {
@@ -34,6 +34,7 @@
         "url": "https://www.instagram.com/salvadorpaints/"
       },
       "web": {
+        "name": "www.salvadorandrade.org",
         "url": "https://www.salvadorandrade.org/"
       }
     },
@@ -56,6 +57,7 @@
     "social": {
       "instagram": null,
       "web": {
+        "name": "www.quincibaker.com",
         "url": "https://www.quincibaker.com/"
       }
     },
@@ -78,6 +80,7 @@
     "social": {
       "instagram": null,
       "web": {
+        "name": "www.briannabass.com",
         "url": "https://www.briannakbass.com/"
       }
     },
@@ -103,6 +106,7 @@
         "url": "https://www.instagram.com/bhashaalways/"
       },
       "web": {
+        "name": "www.bhashachakrabarti.com",
         "url": "https://bhashachakrabarti.com"
       }
     },
@@ -116,7 +120,7 @@
   },
   {
     "name": "Zoila Andrea Coc-Chang",
-    "dob": "b. 1990. Knoxville, Tennessee",
+    "dob": null,
     "group": 2,
     "social": {
       "instagram": {
@@ -164,10 +168,11 @@
     "social": {
       "instagram": null,
       "web": {
+        "name": "www.grantczuj.xyz",
         "url": "http://www.grantczuj.xyz/"
       }
     },
-    "bio": "My studio is a space at the edge of the world of socio-political structures, not permitting attachment or preciousness to anything. This is a space to which I have to allow full criticality of these structures, including that of myself. This gives me permission to analyze the trauma and divisiveness said socio-political structures can produce in lives. My studio practice holds no attachment to and is critical of these boundaries created by class, law, and race, and explores their administration. Within familial and personal experiences of trauma in alienation, I acknowledge past generations of factory auto workers dedicating their lives to capital production, and to my own reaching adulthood while incarcerated. This is a leveraging of lives. My practice holds the possibility of compounding itself into a conversation that can recognize trauma as the detritus of the lives leveraged in the administration of societies.",
+    "bio": "My studio is a space at the edge of the world of socio-political structures, not permitting attachment or preciousness to anything. This is a space to which I have to allow full criticality of said structures, including a complete analyzation of myself. This gives a foundation to analyze the trauma and divisiveness said socio-political structures can produce in lives. My studio practice holds no attachment to and is critical of boundaries created by these structures, which often explores notable social lines of class, law, and race, and sustains a critical concern in their administration. Within familial and personal experiences of trauma in alienation, I acknowledge past generations of factory auto workers dedicating their lives to capital production, and to my own reaching adulthood while incarcerated. This is a leveraging of lives. My practice holds the possibility of compounding itself into a conversation that can recognize trauma as the detritus of the lives leveraged in the administration of societies.",
     "images": {
       "01 Grant Czuj": "Left_Overs:017, 2021. Paintings, yarn, bedsheet, inkjet print, drawing, latex acrylic paint, and spray paint on canvas; 57 x 57 x 3 in. Photo: Etienne Frossard.",
 
@@ -186,6 +191,7 @@
     "social": {
       "instagram": null,
       "web": {
+        "name": "www.opaleckerderuvo.com",
         "url": "http://opaleckerderuvo.com/"
       }
     },
@@ -208,16 +214,17 @@
     "social": {
       "instagram": null,
       "web": {
+        "name": "www.katherineedu.com",
         "url": "http://katherinedu.com/"
       }
     },
-    "bio": "The archive has nothing to tell me, but I am listening anyway. I seek forgotten histories of Asian American immigration, labor, and resistance. In a history book, I find passing reference to a revolt in which four hundred Chinese men, duped by promises of being brought to California, fought to prevent their certain deaths in the guano mines of Peru. The story bears the indelible marks of archival violence: the only names and identities that remain are those of white captors. Through what ethics could I reanimate the dignity of those who, according to history as written, do not exist? My solution is at once autobiographical, objective, and speculative, weaving together personal history, historical documents, and researched fictions. Through large scale landscape paintings and pseudo-museological objects of my own making, I immerse the viewer in a rehearsal of redacted history. I collage paintings, drawings, small sculptures, and writing onto or in proximity of a “main” painting or drawing, allowing narratives to play out in physically superimposed timelines. A keepsake box contains the portrait of an imagined loved one. Speech bubbles contain words uttered by American statesmen in favor of Chinese Exclusion. My brother and I make appearances as characters central to a rebellion. An impossible advertisement simultaneously offers the solution to gardening woes and the “Asiatic problem.” These “footnotes” intervene historically and materially on conventions of representation in Western history painting and Chinese scroll painting. Inverting the relationship between “text” and “footnote,” I foreground the constructed nature of historical narratives. Heeding Saidiya Hartman\u2019s call to “jeopardize the status of the event,” I listen to the archive\u2019s silence and critically fabulate from there.",
+    "bio": "The archive has nothing to tell me, but I am listening anyway. Aboard the Robert Browne, a Connecticut ship, four hundred Chinese men revolted. Duped by promises of being brought to California, they fought to prevent their certain deaths in the guano mines of Peru. The story bears the indelible marks of archival violence: the only names and identities that remain are those of their white captors. Through what ethics could I reanimate the dignity of those who, according to history as written, do not exist? //n &emsp; My solution foregrounds embodiment. In this installation, I adopt the formats of the nineteenth century American cyclorama and the Chinese handscroll painting to create a walk-in narrative container for the experiences of the men aboard the Robert Browne. In this theater of redacted history, men dream of greener shores, fight, and capitulate. They retch at the smell of their own filthy bodies, plot by candlelight, and tend to one another after desperation compels them to the ultimate violence. Each of the hundreds of figures in the work is a pose I took, a face I grimaced, a scenario I inhabited with physical commitment, however momentarily. Through this act of self-investment, I have tried to heed Saidiya Hartman’s call for “narrative restraint”. As I listen to the archive’s silence, I resist the temptation to make romance out of original violence.",
     "images": {
-      "01 Katherine Yaochen Du": "The Robert Browne, 2021. Oil on canvas; 98 x 144 in. Photo: Etienne Frossard.",
+      "01 Katherine Yaochen Du": "The Robert Browne (reverse view, detail), 2022. Charcoal and fabric dye on linen; 48 x 432 in.",
 
-      "02 Katherine Yaochen Du": "The Robert Browne (detail), 2021. Oil on canvas; 6 x 4.5 in. Photo: Etienne Frossard.",
+      "02 Katherine Yaochen Du": "The Robert Browne (reverse view, detail), 2022. Charcoal and fabric dye on linen; 48 x 432 in.",
 
-      "03 Katherine Yaochen Du": "In the Hold, 2021. Fabric dye on linen; 22 x 36 in."
+      "03 Katherine Yaochen Du": "The Robert Browne (reverse view, detail), 2022. Charcoal and fabric dye on linen, 48x432”"
     },
     "videos": null
   },
@@ -228,14 +235,15 @@
     "social": {
       "instagram": null,
       "web": {
+        "name": "www.brettginsburg.info",
         "url": "https://brettginsburg.info/"
       }
     },
-    "bio": "Infrastructural systems are designed to carry us through metropolitan and globalized networks. Through use, we abrade the surfaces of these systems, exposing their ability to collectively index our bodies, restructure time, and reveal patterns of social movement. By working through paintings and objects, I consider the built environment as a departure point to unfold material narratives. //n My process starts by taking a walk outside and using a handheld digital scanner to capture residual gestures and marks embedded in the surfaces of walls, streets, and light poles. I carefully translate these images into my works through a spectrum of precisely machined tolerances and loosely devised matrices. By reverse painting atop slick industrial substrates, I build up countless layers of coagulated pigment through vectorized sequences into pliable membranes of paint that I reinforce with burlap and peel off. I consider my process a proposition for perception; tracing the interdependent realities of machines, coded biological systems, and extensions of ourselves. I am interested in how these subjects remain unseen in the visual realm, yet proliferate our culture, politics, and ecosystems.",
+    "bio": "Infrastructural systems are designed to carry us through metropolitan and globalized networks. Through use, these systems become abraded, exposing their ability to collectively index our bodies, restructure time, and reveal patterns of social movement. By working through paintings and objects, I consider the built environment as a departure point to unfold material narratives. //n &emsp; My process starts by taking a walk outside and using a handheld digital scanner to capture the gestures and marks embedded in walls, streets, and light poles. I carefully translate these images into my works through a spectrum of machined tolerances and loosely devised matrices. By reverse painting atop slick industrial substrates, I build up countless layers of coagulated pigment through vectorized sequences into pliable membranes of paint that I reinforce with burlap and peel off. I consider my process a proposition for perception; tracing the interdependent realities of machines, coded biological systems, and extensions of ourselves. I am interested in how these subjects remain unseen in the visual realm, yet proliferate our culture, politics, and ecosystems.",
     "images": {
-      "01 Brett Ginsburg": "Installation view: Unbroken Sequence Paintings, 2021. Acrylic on burlap; 48 x 60 in. each; and (Not Yet Titled sculpture), 2021. Laser etched felt, laser cut acrylic, linear bearings, aluminum tube stock, manually milled solid aluminum forms; 120 x 12 x 4 in.",
+      "01 Brett Ginsburg": "Installation view: Unbroken Sequence Paintings, 2021. Acrylic on burlap; 48 x 60 in. each; and An Hour Isn’t Just an Hour, 2021. Laser etched felt, laser cut acrylic, linear bearings, aluminum tube stock, manually milled solid aluminum forms; 120 x 12 x 4 in.",
 
-      "02 Brett Ginsburg": "(Not Yet Titled sculpture) (detail), 2021.",
+      "02 Brett Ginsburg": "An Hour Isn’t Just an Hour (detail), 2021.",
 
       "03 Brett Ginsburg": "Leveling Face, 2021. Acrylic on burlap; 48 x 60 in. each. Photo: Etienne Frossard.",
 
@@ -250,6 +258,7 @@
     "social": {
       "instagram": null,
       "web": {
+        "name": "www.samanthajoygroff.com",
         "url": "http://www.samanthajoygroff.com/"
       }
     },
@@ -272,6 +281,7 @@
     "social": {
       "instagram": null,
       "web": {
+        "name": "www.annemailey.com",
         "url": "http://www.annemailey.com/"
       }
     },
@@ -296,10 +306,19 @@
         "username": "@kristoffers.art",
         "url": "https://www.instagram.com/kristoffers.art/"
       },
-      "web": null
+      "web": {
+        "name": "www.KristofferMcAfee.com",
+        "url": "www.KristofferMcAfee.com"
+      }
     },
     "bio": null,
-    "images": null,
+    "images": {
+      "01 Kristoffer McAfee": "Red, White, and Blue (detail), 2022. Hand-cut and painted illustration board and foil on canvas; 50 x 50 in.",
+
+      "02 Kristoffer McAfee": "Red, White, and Blue (detail), 2022. Hand-cut and painted illustration board and foil on canvas; 50 x 50 in.",
+
+      "03 Kristoffer McAfee": "Red, White, and Blue, 2022. Hand-cut and painted illustration board and foil on canvas; 50 x 50 in."
+    },
     "videos": null
   },
   {
@@ -309,6 +328,7 @@
     "social": {
       "instagram": null,
       "web": {
+        "name": "www.patriciaorpilla.com",
         "url": "https://www.patriciaorpilla.com/"
       }
     },
@@ -331,10 +351,11 @@
     "social": {
       "instagram": null,
       "web": {
+        "name": "www.alexandrepuz.com",
         "url": "http://www.alexanderpuz.com/"
       }
     },
-    "bio": "The matter between our ears pulses with neural electricity, charged by excitations of color and shadow. Visual experience is localized in our cognition: color is registered in one location, line and depth in another. I directly stimulate these processing regions of the brain. I build paintings from back to front in a process of strict accounting: I mix gradients in sequences of varying hue, value, and saturation. I then apply tape and masking fluid to canvas to create networks of thin stripes that intersect at slanting angles. The color-modulated lines weave together and produce animated patterns that simultaneously recall cabaret curtains, a stovetop flame, and the spectral vibrancy of the aurora borealis. My paintings are windows of uncanny atmosphere, a glimpse of churning chroma and interference pattern.",
+    "bio": "The matter between our ears pulses with neural electricity, charged by excitations of color and shadow. Visual experience is localized in our cognition- color is registered in one location, line and depth in another. I directly stimulate these processing regions of the brain. I build paintings from back to front in a process of strict accounting: I mix gradients in sequences of varying hue, value, and saturation. I then apply tape and masking fluid to canvas to create networks of thin stripes that intersect at slanting angles. The color-modulated lines weave together and produce animated patterns that simultaneously recall cabaret curtains, a stovetop flame, and the spectral vibrancy of the aurora borealis. //n &emsp; These paintings flicker between the theatrical and the organic: they direct focus to individual moments of color immersed in a system that resembles camouflage. This duality is a magic trick; looking closely, you see fine intersecting lines that create narrow diamonds of hue. Step back, and the composition coalesces into a spread of sensations that is fixed, fluid and warped. My paintings are windows of uncanny atmosphere, a glimpse of churning chroma and interference pattern. //n &emsp; I paint because visual sensation is psychophysical- it transforms our thoughts. The tension that links granular color experience and optical illusion generates questions about self-understanding. Our minds alone are the site of ecstasy and suffering, a lesson I internalized while working as an overnight operator on a suicide hotline. Coping with trauma, panic, and dissociation is a matter of proximity to the event. The way we decode percepts— received environmental data about what is happening— is a high stakes affair. Each move in my paintings is tightly controlled. when the final mask is taken off, however, the particular consequence of each decision is striking and unforeseen. This mystery compels me. Science, politics and technology recount an ever-narrowing view of what it means to be human, pulling our attention from one algorithmically engineered solution to the next. My paintings lure the eye into new, uncertain spaces.",
     "images": {
       "01 Alex Puz": "Violent Heart, 2021. Flashe vinyl acrylic on canvas; 36 x 48 in. Photo: Etienne Frossard.",
 
@@ -357,7 +378,7 @@
       },
       "web": null
     },
-    "bio": "athena quispe is a Peruvian-American multidisciplinary artist and poet dedicated to the cosmic endeavor of softening and distorting symbolic ideas and materials to create poetic installations and synesthetic environments that go beyond representational aesthetics. She distills scents and works with natural pigments, metallurgy, pyrography, printmaking, and pulverizes healing crystals to summon a power that mends the spiritual imbalance between humans and the objects of art and art-making.  She uses long-established academic painting strategies formalized throughout Europe in order to address questions and issues around decentering the canon of Western Art history and painting. Her art and creative style is a continuation and transmutation of her Andean heritage and that of the autochthonous \u2018Americas\u2019—a precolonial imagination and invention often and wrongly accredited to European innovations.",
+    "bio": "athena quispe is a Peruvian-American multidisciplinary artist and romantic poet dedicated to the cosmic endeavor of softening and distorting symbolic ideas and materials to create poetic installations and synesthetic environments that increase psychic and soul redemption. For example, she installs green filters to radicalize the institutional setting, creating a magenta afterimage to alter cognitive processes that soothe the eye and our emotions. Furthermore, she distills scents and works with natural pigments, metallurgy, pyrography, fire, printmaking, and pulverizes healing crystals to summon a power that mends the spiritual imbalance between humans and the objects of art and art-making. athena uses long-established academic painting strategies formalized throughout Europe in order to address questions and issues around decentering the canon of Western Art history and painting. However, her art and creative style is a continuation and transmutation of her <span><a style='color:#01ff00;' href='https://native-land.ca/'>Quechua</a></span> heritage and that of the autochthonous ‘Americas’—a precolonial aesthetic, sacred tradition and invention often and wrongly accredited to European art (i.e., Modernism, surrealism, AbEx., etc).",
     "images": {
       "01 athena quispe": ""
     },
@@ -365,7 +386,7 @@
   },
   {
     "name": "Matt Smoak",
-    "dob": "b. 1986, raised in Tokyo and Washington, DC",
+    "dob": "Raised in Tokyo and Washington, DC",
     "group": 1,
     "social": {
       "instagram": {
@@ -373,12 +394,13 @@
         "url": "https://www.instagram.com/mattsmoak/"
       },
       "web": {
-        "url": "mattsmoak.com"
+        "name": "www.mattsmoak.com",
+        "url": "https://www.mattsmoak.com/"
       }
     },
-    "bio": "Matt Smoak is a painter and bricoleur interested in gestures of unfolding. He uses a range of everyday materials, drawings, photos, notes, poems, mail, mirrors, just-used sandwich wrappers, magazine pages, foil, and grocery lists to make collages, paintings, and performative pieces. His work explores a bodily relation to space—as a site of possibilities, a site of being, and a site of representation. Referencing queer histories, bending space-time relations, and patterning romantic gestures, he engages the possibilities found in delicate points of continued attachment.",
+    "bio": "Matt Smoak is a painter and bricoleur. He makes paintings, collages, and performance pieces using time, gesture, and a range of everyday materials: drawings, poems, mirrors, and just-used sandwich wrappers. Referencing queer histories, biracial space-time relations, and romantic gestures, he unfolds new spaces found in delicate points of continued attachment.",
     "images": {
-      "01 Matt Smoak": "Painting & Mirror, 2021. Oil on board, repaired mirror, wood, saw dust, glue, wood chair, and rope.",
+      "01 Matt Smoak": "Reflection, 2021. Oil on board, repaired mirror, wood, saw dust, glue, wood chair, and rope.",
 
       "02 Matt Smoak": "Every Flower Asked God for This Ground, (paper bricolage), 2021. Pencil, ink, photos, tape, and paper.",
 
@@ -395,10 +417,11 @@
     "social": {
       "instagram": null,
       "web": {
+        "name": "www.brennensteines.com",
         "url": "http://brennensteines.com/"
       }
     },
-    "bio": "How can a painting practice grapple with the Anthropocene? Many artists speculate on fictional futures, creating sci-fi horizons composed of crumbling buildings and flooded plains. I instead look at the ground beneath our feet. The soot, the soil, the concrete, and the stone bear witness to our actions in the here and now. My paintings echo the substrates of our collective footprint; resembling fossilized slabs that crackle with clairvoyance of the future by speaking in the weathered voice of the past. //n As a child, I used to spend hours each day searching for fossils in the prairie behind my childhood home. The process of wandering aimlessly and digging endlessly\u2013hoping to discover some fragment of fossilized life\u2013was a youthful obsession. Through the years, my experience with illness and loss have transformed this childhood interest into an art practice that examines the vast temporality of geologic time in relation to our own mortality. //n My work registers the poetics of time through a process of additive and subtractive mark making. Layers of oil paint are added to the surface, left to dry, and then excavated; creating a geological sedimentation of pigment on the substrate. The paintings become visceral records of their own creation, resulting in topographical terrains that expose the traces of their own history. Painting thus becomes an excavation site where past and present converge; an act of transmutation where duration and entropy become a way to understand the turbulent tectonics of the body and the earth.",
+    "bio": "How can a painting practice grapple with the Anthropocene? Many artists speculate on fictional futures, creating sci-fi horizons composed of crumbling buildings and flooded plains. I instead look at the ground beneath our feet. The soot, the soil, the concrete, and the stone bear witness to our actions in the here and now. My paintings echo the substrates of our collective footprint; resembling fossilized slabs that crackle with clairvoyance of the future by speaking in the weathered voice of the past. //n &emsp; As a child, I used to spend hours each day searching for fossils in the prairie behind my childhood home. The process of wandering aimlessly and digging endlessly\u2013hoping to discover some fragment of fossilized life\u2013was a youthful obsession. Through the years, my experience with illness and loss have transformed this childhood interest into an art practice that examines the vast temporality of geologic time in relation to our own mortality. //n &emsp; My work registers the poetics of time through a process of additive and subtractive mark making. Layers of oil paint are added to the surface, left to dry, and then excavated; creating a geological sedimentation of pigment on the substrate. The paintings become visceral records of their own creation, resulting in topographical terrains that expose the traces of their own history. Painting thus becomes an excavation site where past and present converge; an act of transmutation where duration and entropy become a way to understand the turbulent tectonics of the body and the earth.",
     "images": {
       "01 Brennen Steines": "Dawn, 2021. Oil on canvas; 117 x 80 in. Photo: Etienne Frossard.",
 
@@ -417,6 +440,7 @@
     "social": {
       "instagram": null,
       "web": {
+        "name": "www.ashleyteamer.com",
         "url": "https://ashleyteamer.com/"
       }
     },
@@ -442,6 +466,7 @@
         "url": "https://www.instagram.com/just.n.james/"
       },
       "web": {
+        "name": "www.justinjamesvoiss.com",
         "url": "http://justinjamesvoiss.com/"
       }
     },

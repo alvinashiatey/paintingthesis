@@ -20,10 +20,7 @@
     .ppte {
       display: inline-block;
     }
-    // & > * {
-    //   display: inline-block;
-    // }
-    @media screen and (max-width: 40em) {
+    @media screen and (max-width: 60em) {
       columns: 1;
     }
   }
