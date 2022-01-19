@@ -1,6 +1,7 @@
 @use "./components/reset";
 @use "./components/home";
-@use "./components/_artists";
+@use "./components/artists";
+@use "./components/info";
 @import "./mixins/utils";
 
 body {
