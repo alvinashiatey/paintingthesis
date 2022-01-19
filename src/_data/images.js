@@ -22,6 +22,8 @@ module.exports = async function () {
             type: "buffer",
           });
           let folderNameArr = item.title.split("-");
+          //remove trailing extension from item.title. Where fileName "01-foo-boo.jpeg" becomes "01-foo-boo".
+          let fileName = item.title.replace(/\.[^/.]+$/, "");
           let removeDigit = folderNameArr.shift();
           let folderName;
           if (folderNameArr.length <= 2) {
@@ -39,10 +41,10 @@ module.exports = async function () {
           if (!fs.existsSync(imageDir)) {
             fs.mkdir(imageDir, { recursive: true }, (err) => {
               if (err) throw err;
-              sharp(imageBuffer).toFile(`${imageDir}${item.title}`);
+              sharp(imageBuffer).toFile(`${imageDir}${fileName}.jpg`);
             });
           } else {
-            sharp(imageBuffer).toFile(`${imageDir}${item.title}`);
+            sharp(imageBuffer).toFile(`${imageDir}${fileName}.jpg`);
           }
         });
       })

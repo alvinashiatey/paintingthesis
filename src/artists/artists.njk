@@ -58,10 +58,12 @@ eleventyComputed:
             {% endif %}
             <br>
           </div>
-          <div class="artist__bio">
-            {% set bio = artist.bio | replace('//n', '<br>') %}
-            <p>{{ bio | safe }}</p>
-          </div>
+          {% if artist.bio %}
+            <div class="artist__bio">
+              {% set bio = artist.bio | replace('//n', '<br>') %}
+              <p>{{ bio | safe }}</p>
+            </div>
+          {% endif %}
           <div class="artists__info">
             <br>
               <div class="social">
@@ -85,14 +87,20 @@ eleventyComputed:
                 <p>{{artist.dob}}</p>
               </div>
             {% endif %}
-            <br>
+            {%if artist.bio %}
+              <br>
+            {% endif %}
           </div>
-          <div class="artist__bio">
-            {% set bio = artist.bio | replace('//n', '<br>') %}
-            <p>{{ bio | safe }}</p>
-          </div>
+          {% if artist.bio %}
+            <div class="artist__bio">
+              {% set bio = artist.bio | replace('//n', '<br>') %}
+              <p>{{ bio | safe }}</p>
+            </div>
+          {% endif %}
           <div class="artist__info">
+          {% if artist.bio %}
             <br>
+          {% endif %}  
             <div class="social">
           {% if artist.social.instagram.username %}
             <a href="{{artist.social.instagram.url}}" target="_blank">{{artist.social.instagram.username}}</a><br>
