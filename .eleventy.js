@@ -5,7 +5,11 @@ const OUTPUT_DIR = "_site";
 const PATH_PREFIX = "/";
 
 module.exports = function (eleventyConfig) {
-  const configuredMdLibrary = markdownIt({ html: true }).disable("code");
+  const configuredMdLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true,
+  }).disable("code");
   eleventyConfig.setLibrary("md", configuredMdLibrary);
   const videoShortCode = require("./src/utils/videoShortCode");
 
