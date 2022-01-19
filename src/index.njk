@@ -20,25 +20,29 @@ cssContent: '@font-face { font-family: "Century-BookCondensed"; src: url(assets/
         <div class="date">
           <h2>Group I: Jan 31-Feb 10, 2022</h2>
         </div>
-        {%- for artist in collections.artists %}
-          {%- if artist.data.group == 1 %}
-          <div class="artist">
-            <a href="{{ artist.url }}"><h2>{{ artist.data.name }}</h2></a>
-          </div>
-          {%- endif %}
-        {%- endfor %}
+        <div class="g__artists">
+          {%- for artist in collections.artists %}
+            {%- if artist.data.group == 1 %}
+            <div class="artist">
+              <a href="{{ artist.url }}"><h2>{{ artist.data.name }}</h2></a>
+            </div>
+            {%- endif %}
+          {%- endfor %}
+        </div>
       </div>
       <div class="group__2">
         <div class="date">
           <h2>Group II: Feb 22-Mar 4, 2022</h2>
         </div>
-        {%- for artist in collections.artists %}
-          {%- if artist.data.group == 2 %}
-          <div class="artist">
-            <a href="{{ artist.url }}"><h2>{{ artist.data.name }}</h2></a>
-          </div>
-          {%- endif %}
-        {%- endfor %}
+        <div class="g__artists">
+          {%- for artist in collections.artists %}
+            {%- if artist.data.group == 2 %}
+            <div class="artist">
+              <a href="{{ artist.url }}"><h2>{{ artist.data.name }}</h2></a>
+            </div>
+            {%- endif %}
+          {%- endfor %}
+        </div>
       </div>
     </div>
   </div>

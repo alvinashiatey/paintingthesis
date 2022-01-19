@@ -64,10 +64,14 @@ eleventyComputed:
           </div>
           <div class="artists__info">
             <br>
-            <div class="social">
+              <div class="social">
+            {% if artist.social.instagram.username %}
               <a href="{{artist.social.instagram.url}}" target="_blank">{{artist.social.instagram.username}}</a><br>
-              <a href="{{artist.social.web.url}}" target="_blank">{{artist.social.web.url}}</a>
-            </div>
+            {% endif %}
+            {% if artist.social.web.url %}
+              <a href="{{artist.social.web.url}}" target="_blank">{{artist.social.web.name}}</a>
+            {% endif %}
+              </div>
           </div>
         </div>
       </div> 
@@ -89,14 +93,13 @@ eleventyComputed:
           </div>
           <div class="artist__info">
             <br>
-            
-              <div class="social">
-            {% if artist.social.instagram.username %}
-              <a href="{{artist.social.instagram.url}}" target="_blank">{{artist.social.instagram.username}}</a><br>
-            {% endif %}
-            {% if artist.social.web.url %}
-              <a href="{{artist.social.web.url}}" target="_blank">{{artist.social.web.name}}</a>
-            {% endif %}
+            <div class="social">
+          {% if artist.social.instagram.username %}
+            <a href="{{artist.social.instagram.url}}" target="_blank">{{artist.social.instagram.username}}</a><br>
+          {% endif %}
+          {% if artist.social.web.url %}
+            <a href="{{artist.social.web.url}}" target="_blank">{{artist.social.web.name}}</a>
+          {% endif %}
             </div>
           </div>
         </div>

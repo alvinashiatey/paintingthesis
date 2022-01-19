@@ -42,6 +42,15 @@
         .group__1,
         .group__2 {
           margin-top: 2rem;
+          .date {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+      .g__artists {
+        padding-inline-start: 1.8rem;
+        @media screen and (max-width: 60em) {
+          padding-inline-start: 0rem;
         }
       }
       a {
@@ -55,8 +64,8 @@
         float: left;
         clear: both;
         line-height: 120%;
-        padding-block-end: 0.9rem;
         @media screen and (max-width: 60em) {
+          padding-block-end: 0.2rem;
           margin-inline-start: 0;
         }
       }
