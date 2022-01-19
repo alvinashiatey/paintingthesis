@@ -12,6 +12,10 @@ body {
   max-width: 100%;
   margin: 0;
   font-size: 62.5%;
+  overflow: hidden;
+  @media screen and (max-width: 60em) {
+    overflow: auto;
+  }
 
   main {
     font-size: 1.125rem;

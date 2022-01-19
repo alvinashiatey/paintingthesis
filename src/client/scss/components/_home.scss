@@ -20,14 +20,18 @@
 
   .home__header {
     padding-top: 1.5rem;
-    columns: 2;
+    display: flex;
+    justify-content: space-between;
 
-    .home__link {
-      display: inline-block;
-    }
+    // .home__link,
+    // .info {
+    //   background: wheat;
+    //   display: inline-block;
+    // }
 
     @media screen and (max-width: 60em) {
-      columns: 1;
+      flex-direction: column;
+      gap: 0.5rem;
     }
   }
   .groups {
