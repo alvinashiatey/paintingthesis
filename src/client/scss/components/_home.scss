@@ -20,18 +20,19 @@
 
   .home__header {
     padding-top: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-
-    // .home__link,
-    // .home__info {
-    //   background: wheat;
-    //   display: inline-block;
-    // }
+    // columns: 3;
+    display: grid;
+    grid-template-columns: 1fr 0.7fr 0.25fr;
+    .home__info {
+      justify-self: end;
+    }
 
     @media screen and (max-width: 60em) {
-      flex-direction: column;
-      gap: 0.5rem;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      .home__info {
+        justify-self: start;
+      }
     }
   }
   .groups {
