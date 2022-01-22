@@ -14,8 +14,13 @@ body {
   margin: 0;
   font-size: 62.5%;
   overflow: hidden;
+  @media screen and (max-width: 90em) {
+    // overflow: auto;
+    font-size: 60vmin;
+  }
   @media screen and (max-width: 60em) {
     overflow: auto;
+    font-size: 60vmin;
   }
 
   main {

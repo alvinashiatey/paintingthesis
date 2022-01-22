@@ -29,7 +29,8 @@
         }
       }
     }
-    .next__artist a {
+    .next__artist a,
+    .next__artist a h1 {
       font-size: 1.75rem;
       line-height: 120%;
       @media screen and (max-width: 60em) {
