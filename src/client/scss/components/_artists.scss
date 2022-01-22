@@ -8,6 +8,15 @@
     height: auto;
   }
 
+  .next__artist.mobile {
+    display: none;
+    padding-inline: 1rem;
+    @media screen and (max-width: 40em) {
+      color: tomato;
+      display: block;
+    }
+  }
+
   .caption {
     font-size: 1rem;
   }
@@ -22,19 +31,17 @@
     @media screen and (max-width: 60em) {
       padding-inline: 1rem;
     }
-    .vm__identity {
-      a {
-        h1 {
-          // font-size: 2.5rem;
-        }
-      }
-    }
+
     .next__artist a,
     .next__artist a h1 {
       font-size: 1.75rem;
       line-height: 120%;
       @media screen and (max-width: 60em) {
         font-size: 1.5rem;
+        display: none;
+      }
+      @media screen and (max-width: 40em) {
+        display: none;
       }
     }
   }

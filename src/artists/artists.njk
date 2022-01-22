@@ -133,4 +133,7 @@ eleventyComputed:
       </div>
     {%- endif -%}
   </div>
+  <div class="next__artist mobile">
+    <a {% if artist.name == "Justin James Voiss"%} href="/" ><h1>Home</h1></a> {% else %} href="{{ pagination.href.next }}" ><p>Next Artist →</p></a> {% endif %}
+  </div>
 </div>
