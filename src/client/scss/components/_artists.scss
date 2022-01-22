@@ -10,7 +10,7 @@
 
   .next__artist.mobile {
     display: none;
-    padding-inline: 1rem;
+    padding: 1rem;
     @media screen and (max-width: 40em) {
       color: tomato;
       display: block;
@@ -70,7 +70,7 @@
       overflow: hidden;
       flex-direction: column;
       @media screen and (max-width: 60em) {
-        overflow: auto;
+        overflow-y: auto;
         height: auto;
       }
       .works {
