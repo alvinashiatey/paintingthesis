@@ -50,7 +50,7 @@
     display: flex;
     gap: 5rem;
     padding-inline: 2rem;
-    height: 100%;
+    height: calc(100% - var(--header_height));
     @media screen and (max-width: 60em) {
       flex-direction: column;
       padding-inline: 1rem;
@@ -114,6 +114,9 @@
         .artist__bio {
           font-size: 1.75rem;
           line-height: 120%;
+        }
+        .artist__info {
+          padding-bottom: var(--header_height);
         }
       }
     }

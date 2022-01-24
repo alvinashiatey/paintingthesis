@@ -140,14 +140,12 @@ function onDocumentMouseMove(event) {
 }
 
 function render() {
-  if (isMoblie == false) {
-    if (bubs) {
-      for (let i = 0; i < bubs.length; i++) {
-        bubs[i].rotation.y += 0.0125;
-        bubs[i].rotation.z += 0.0025;
-        bubs[i].position.x += 0.0055;
-        bubs[i].position.y += 0.006;
-      }
+  if (bubs) {
+    for (let i = 0; i < bubs.length; i++) {
+      bubs[i].rotation.y += 0.0125;
+      bubs[i].rotation.z += 0.0025;
+      bubs[i].position.x += 0.0055;
+      bubs[i].position.y += 0.006;
     }
     //   if (zoomingIn && camera.position.z >= 0 && camera.position.z < 49) {
     //     camera.position.z += za;
