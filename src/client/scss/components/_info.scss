@@ -1,6 +1,7 @@
 .info {
   height: 100vh;
   font-size: 1.75rem;
+  line-height: 120%;
   &__header {
     height: 3rem;
     display: flex;
@@ -22,24 +23,32 @@
   &__main {
     padding-top: 2.5rem;
     display: flex;
-    // gap: 5rem;
+    gap: 5rem;
     height: calc(100% - 3rem);
     padding-inline: 2rem;
     box-sizing: border-box;
     @media screen and (max-width: 60em) {
       padding-inline: 1rem;
     }
-    .info__info {
-      h1 {
-        font-size: 2.5rem;
-      }
+    .info__covid {
+      flex: 1;
+      // .sideinfo__text p a{
+      //   font-size: 1rem;
+      // }
     }
+
     .info__container {
+      flex: 1;
       width: 50%;
       height: 100%;
       overflow: hidden;
       @media screen and (max-width: 60em) {
         width: 100%;
+      }
+      .info__info {
+        h1 {
+          font-size: 2.5rem;
+        }
       }
       .article__wrapper {
         width: 100%;
