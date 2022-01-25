@@ -7,12 +7,24 @@
     overflow: auto;
     height: auto;
   }
+  /* Portrait and Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    overflow: auto;
+    height: auto;
+
+    .artists__wrapper {
+      flex-direction: column;
+      padding-inline: 1rem;
+      &.second {
+        flex-direction: column-reverse;
+      }
+    }
+  }
 
   .next__artist.mobile {
     display: none;
     padding: 1rem;
     @media screen and (max-width: 40em) {
-      color: tomato;
       display: block;
     }
   }
