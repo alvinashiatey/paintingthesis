@@ -130,7 +130,7 @@ function onWindowResize() {
 
   renderer.setSize(window.innerWidth, window.innerHeight);
 
-  ratio = $(window).width() / $(window).height();
+  ratio = window.innerWidth / window.innerHeight;
 }
 
 function onDocumentMouseMove(event) {
