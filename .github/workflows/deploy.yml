@@ -43,7 +43,9 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           exclude: |
+            **/_site/**
             **/src/**
             **/.git*
             **/.git*/**
             **/node_modules/**
+            readme.md
