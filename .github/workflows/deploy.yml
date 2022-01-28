@@ -34,15 +34,14 @@ jobs:
         uses: actions/download-artifact@main
         with:
           name: _site
-          path: _site
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          server: ftp.yaleschoolofart.org
-          username: painting2022@yaleschoolofart.org
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: http://yaleschoolofart.org/painting2022/
           exclude: |
+            src/
             **/.git*
             **/.git*/**
             **/node_modules/**
