@@ -36,6 +36,7 @@ jobs:
         uses: actions/download-artifact@main
         with:
           name: _site
+          path: _site
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
