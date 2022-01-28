@@ -22,7 +22,7 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: _site
-          path: _site
+          path: _site/
   ftp-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
@@ -43,7 +43,6 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           exclude: |
-            _site/
             **/src/**
             **/.git*
             **/.git*/**
