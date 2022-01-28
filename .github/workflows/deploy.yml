@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
-        uses: actions/checkout@deploy
+        uses: actions/checkout@main
       - name: install dependencies
         run: |
           npm install
@@ -17,7 +17,7 @@ jobs:
         run: |
           npm run build
       - name: archive production artifacts
-        uses: actions/upload-artifact@deploy
+        uses: actions/upload-artifact@main
         with:
           name: _site
           path: _site
@@ -27,11 +27,11 @@ jobs:
     needs: build
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@deploy
+        uses: actions/checkout@v2
         with:
           fetch-depth: 2
       - name: download artifact from previous step
-        uses: actions/download-artifact@deploy
+        uses: actions/download-artifact@main
         with:
           name: _site
           path: _site
