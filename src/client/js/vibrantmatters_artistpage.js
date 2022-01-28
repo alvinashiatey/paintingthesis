@@ -80,7 +80,7 @@ function init() {
     });
     setInterval(function () {
       counter += 1;
-      if (counter > 10) {
+      if (counter > 500) {
         let bub = new THREE.Mesh(sphere, material);
         let bx = Math.random().map(0, 1, -15, 15);
         let by = Math.random().map(0, 1, -10, 10);

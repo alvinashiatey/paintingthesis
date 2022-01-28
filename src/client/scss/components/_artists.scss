@@ -2,7 +2,6 @@
   height: 100vh;
   overflow: hidden;
   --header_height: 3rem;
-  // font-size: 1.75rem;
   @media screen and (max-width: 60em) {
     overflow: auto;
     height: auto;
@@ -29,7 +28,7 @@
   }
 
   .caption {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 
   .artist__header {
@@ -45,10 +44,10 @@
 
     .next__artist a,
     .next__artist a h1 {
-      font-size: 1.75rem;
-      line-height: 120%;
+      font-size: 1.55rem;
+      line-height: 130%;
       @media screen and (max-width: 60em) {
-        font-size: 1.5rem;
+        font-size: 1.55rem;
         display: none;
       }
       @media screen and (max-width: 40em) {
@@ -106,7 +105,7 @@
           }
         }
         .caption {
-          font-size: 1rem;
+          font-size: 1.125rem;
         }
       }
     }
@@ -140,8 +139,8 @@
         box-sizing: content-box; /* So the width will be 100% + 17px */
 
         .artist__bio {
-          font-size: 1.75rem;
-          line-height: 120%;
+          font-size: 1.55rem;
+          line-height: 130%;
         }
         .artist__info {
           padding-bottom: var(--header_height);
