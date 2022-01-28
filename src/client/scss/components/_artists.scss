@@ -115,6 +115,23 @@
       overflow: hidden;
       width: 100%;
       height: 100%;
+      @media screen and (min-width: 60em) {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 4%;
+          background: rgb(255, 255, 255);
+          background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0) 70%,
+            rgba(255, 255, 255, 1) 100%
+          );
+          z-index: 20;
+        }
+      }
       .artist__wrapper {
         width: 100%;
         height: 100%;
