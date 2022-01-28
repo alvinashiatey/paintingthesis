@@ -1,0 +1,48 @@
+on:
+  push:
+    branches:
+      - deploy
+name: 🚀 Deploy website on push
+jobs:
+  build:
+    name: Build 🏗
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@deploy
+      - name: install dependencies
+        run: |
+          npm install
+      - name: build
+        run: |
+          npm run build
+      - name: archive production artifacts
+        uses: actions/upload-artifact@deploy
+        with:
+          name: _site
+          path: _site
+  ftp-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@deploy
+        with:
+          fetch-depth: 2
+      - name: download artifact from previous step
+        uses: actions/download-artifact@deploy
+        with:
+          name: _site
+          path: _site
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: ftp.yaleschoolofart.org
+          username: painting2022@yaleschoolofart.org
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: http://yaleschoolofart.org/painting2022/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
