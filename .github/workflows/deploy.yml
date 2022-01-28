@@ -14,6 +14,8 @@ jobs:
         run: |
           npm install
       - name: build
+        env:
+          ARENA_API: ${{ secrets.ARENA_API }}
         run: |
           npm run build
       - name: archive production artifacts
@@ -41,7 +43,8 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           exclude: |
-            src/
+            **/src/**
+            **/_site/**
             **/.git*
             **/.git*/**
             **/node_modules/**
