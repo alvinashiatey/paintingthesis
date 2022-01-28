@@ -41,10 +41,18 @@ module.exports = async function () {
           if (!fs.existsSync(imageDir)) {
             fs.mkdir(imageDir, { recursive: true }, (err) => {
               if (err) throw err;
-              sharp(imageBuffer).toFile(`${imageDir}${fileName}.jpg`);
+              sharp(imageBuffer)
+                .resize({
+                  width: 2000,
+                })
+                .toFile(`${imageDir}${fileName}.jpg`);
             });
           } else {
-            sharp(imageBuffer).toFile(`${imageDir}${fileName}.jpg`);
+            sharp(imageBuffer)
+              .resize({
+                width: 2000,
+              })
+              .toFile(`${imageDir}${fileName}.jpg`);
           }
         });
       })

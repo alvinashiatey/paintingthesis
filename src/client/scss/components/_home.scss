@@ -40,7 +40,7 @@
   .groups {
     margin-top: 2rem;
     .artist__groups {
-      margin-top: 2rem;
+      margin-block-end: 2rem;
       width: 100%;
       columns: 2;
       @media screen and (max-width: 60em) {
