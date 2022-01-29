@@ -15,6 +15,7 @@
 
   .home__header {
     padding-top: 1.5rem;
+    // --header_height: 3rem;
     // columns: 3;
     display: grid;
     grid-template-columns: 1fr 0.7fr 0.25fr;
@@ -59,7 +60,7 @@
         @media screen and (max-width: 60em) {
           padding-inline-start: 0rem;
         }
-        display: none;
+        // display: none;
       }
       a {
         h5 {
@@ -84,5 +85,6 @@
   }
   .curated {
     font-size: 1.55rem;
+    padding-top: 1rem;
   }
 }
