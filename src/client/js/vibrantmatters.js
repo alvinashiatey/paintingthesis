@@ -1,5 +1,4 @@
 import * as THREE from "three";
-// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 
@@ -66,7 +65,7 @@ function init() {
       .setMaterials(materials)
       .load("../threeasset/test.obj", function (obj) {
         obj.position.x = -1;
-        obj.position.y = -2;
+        obj.position.y = -1.5;
         obj.position.z = 2;
         obj.scale.set(0.052, 0.052, 0.052);
         var texture = new THREE.TextureLoader().load(

@@ -11,11 +11,24 @@ cssContent: '@font-face { font-family: "Century-BookCondensed"; src: url(assets/
         </div>
     </div>
     <div class="info__main">
-        <div class="info__covid">
-            <div class="info__covid__head">
-                <h1>Current Visitor Policy for Exhibition</h1>
+        <div class="info__container">
+            <div class="info__info">
+                {# <h1>Vibrant Matters</h1> #}
+                <p class="caption">Curated by Melanie Kress & Rachelle Dang</p>
             </div>
+            <div class="article__wrapper">
+                <article>
+                    {{ content | safe }}
+                </article>
+            </div>
+        </div>
+        <div class="info__covid">
+            {# <div class="info__covid__head">
+                <h1>Current Visitor Policy for Exhibition</h1>
+            </div> #}
             <div class="info__covid__text">
+            <p>Current Visitor Policy for Exhibition</p>
+            {# </br> #}
                 <p>
                     Green Hall Gallery exhibitions are open to in-person visits from Yale community members, including faculty, staff, and students in compliance with the <a href="https://covid19.yale.edu/visitors-policy">Visitors Policy</a>. All individuals, regardless of vaccination status, are required to wear <a href="https://ehs.yale.edu/mask-guidance">masks</a> inside the exhibition and indoors while on campus. These requirements reflect current public health guidance and Yale’s COVID-19 health and safety program.  More information can be found here:</br>
                     &emsp;<a href="https://covid19.yale.edu/campus-life/events-gatherings-meetings">https://covid19.yale.edu/campus-life/events-gatherings-meetings</a></br>
@@ -33,17 +46,6 @@ cssContent: '@font-face { font-family: "Century-BookCondensed"; src: url(assets/
                     <a href="mailto:SoAGreenHallGallery@gmail.com ">SoAGreenHallGallery@gmail.com </a><br> 
                     Monday - Sunday 9:30 a.m. - 6:00 p.m.  
                 </p>
-            </div>
-        </div>
-        <div class="info__container">
-            <div class="info__info">
-                <h1>Vibrant Matters</h1>
-                <p class="caption">Curated by Melanie Kress & Rachelle Dang</p>
-            </div>
-            <div class="article__wrapper">
-                <article>
-                    {{ content | safe }}
-                </article>
             </div>
         </div>
     </div>
