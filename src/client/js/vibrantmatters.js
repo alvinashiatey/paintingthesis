@@ -141,18 +141,18 @@ if (canvas) {
   render();
 }
 
-let toggle = false;
-let pa = document.querySelector(".pa");
-let group = document.querySelector(".artist__groups");
-pa.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (isMoblie == false) {
-    if (toggle == false) {
-      group.style.display = "block";
-      toggle = true;
-    } else {
-      group.style.display = "none";
-      toggle = false;
-    }
-  }
-});
+// let toggle = false;
+// let pa = document.querySelector(".pa");
+// let group = document.querySelector(".artist__groups");
+// pa.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   if (isMoblie == false) {
+//     if (toggle == false) {
+//       group.style.display = "block";
+//       toggle = true;
+//     } else {
+//       group.style.display = "none";
+//       toggle = false;
+//     }
+//   }
+// });

@@ -44,7 +44,7 @@
       margin-block-end: 2rem;
       width: 100%;
       columns: 2;
-      display: none;
+      // display: none;
       @media screen and (max-width: 60em) {
         display: block;
       }
@@ -83,13 +83,12 @@
         }
       }
       .group__1 {
-        // flex: 1;
         display: inline-block;
       }
     }
   }
   .curated {
     font-size: 1.55rem;
-    padding-top: 1rem;
+    padding-top: 1.3rem;
   }
 }
