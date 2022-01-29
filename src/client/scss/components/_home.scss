@@ -14,7 +14,7 @@
   }
 
   .home__header {
-    padding-top: 1.5rem;
+    padding-top: 1.25rem;
     // --header_height: 3rem;
     // columns: 3;
     display: grid;
@@ -44,6 +44,10 @@
       margin-block-end: 2rem;
       width: 100%;
       columns: 2;
+      display: none;
+      @media screen and (max-width: 60em) {
+        display: block;
+      }
       @media screen and (max-width: 60em) {
         columns: 1;
         padding-block-end: 1.5rem;
@@ -79,6 +83,7 @@
         }
       }
       .group__1 {
+        // flex: 1;
         display: inline-block;
       }
     }

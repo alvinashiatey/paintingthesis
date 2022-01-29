@@ -65,7 +65,7 @@ function init() {
       .setMaterials(materials)
       .load("../threeasset/test.obj", function (obj) {
         obj.position.x = -1;
-        obj.position.y = -1.5;
+        obj.position.y = -2;
         obj.position.z = 2;
         obj.scale.set(0.052, 0.052, 0.052);
         var texture = new THREE.TextureLoader().load(
@@ -137,7 +137,22 @@ function render() {
 document.addEventListener("mousemove", onDocumentMouseMove);
 
 if (canvas) {
-  console.log("canvas", canvas);
   init();
   render();
 }
+
+let toggle = false;
+let pa = document.querySelector(".pa");
+let group = document.querySelector(".artist__groups");
+pa.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (isMoblie == false) {
+    if (toggle == false) {
+      group.style.display = "block";
+      toggle = true;
+    } else {
+      group.style.display = "none";
+      toggle = false;
+    }
+  }
+});
