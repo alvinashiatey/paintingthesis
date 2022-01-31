@@ -115,10 +115,12 @@
           @media screen and (max-width: 60em) {
             padding-bottom: 5rem;
           }
-          p + p {
-            text-indent: 2rem;
-          }
+          // p + p {
+          //   text-indent: 2rem;
+          // }
           .quote {
+            font-size: 1.13rem;
+            line-height: 130%;
             padding-left: 2rem;
           }
           .author {
@@ -126,7 +128,7 @@
             text-align: right;
           }
           .indenttext {
-            text-indent: 2rem;
+            // text-indent: 2rem;
             padding-left: 2rem;
           }
           .mk {
@@ -134,6 +136,7 @@
           }
           .ty {
             font-size: 1.13rem;
+            line-height: 130%;
           }
         }
       }
