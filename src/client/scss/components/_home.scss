@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 2.75rem;
+  padding-bottom: 0.5rem;
   // font-size: 1.75rem;
   padding-inline: 2rem;
   @media screen and (max-width: 60em) {
@@ -14,7 +14,8 @@
   }
 
   .home__header {
-    padding-top: 1.5rem;
+    padding-top: 1.25rem;
+    // --header_height: 3rem;
     // columns: 3;
     display: grid;
     grid-template-columns: 1fr 0.7fr 0.25fr;
@@ -43,6 +44,10 @@
       margin-block-end: 2rem;
       width: 100%;
       columns: 2;
+      // display: none;
+      @media screen and (max-width: 60em) {
+        display: block;
+      }
       @media screen and (max-width: 60em) {
         columns: 1;
         padding-block-end: 1.5rem;
@@ -56,9 +61,11 @@
       }
       .g__artists {
         padding-inline-start: 1.8rem;
+        counter-reset: artist;
         @media screen and (max-width: 60em) {
           padding-inline-start: 0rem;
         }
+        // display: none;
       }
       a {
         h5 {
@@ -71,6 +78,24 @@
         float: left;
         clear: both;
         line-height: 120%;
+        display: flex;
+
+        @media screen and (max-width: 40em) {
+          &::before {
+            content: counter(artist);
+            counter-increment: artist;
+            display: inline-block;
+            width: 1.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 0.25rem;
+            background-color: #fff;
+            color: #000;
+          }
+        }
         @media screen and (max-width: 60em) {
           padding-block-end: 0.2rem;
           margin-inline-start: 0;
@@ -80,5 +105,9 @@
         display: inline-block;
       }
     }
+  }
+  .curated {
+    font-size: 1.55rem;
+    padding-top: 1.3rem;
   }
 }

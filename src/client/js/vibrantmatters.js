@@ -1,5 +1,4 @@
 import * as THREE from "three";
-// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 
@@ -138,7 +137,22 @@ function render() {
 document.addEventListener("mousemove", onDocumentMouseMove);
 
 if (canvas) {
-  console.log("canvas", canvas);
   init();
   render();
 }
+
+// let toggle = false;
+// let pa = document.querySelector(".pa");
+// let group = document.querySelector(".artist__groups");
+// pa.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   if (isMoblie == false) {
+//     if (toggle == false) {
+//       group.style.display = "block";
+//       toggle = true;
+//     } else {
+//       group.style.display = "none";
+//       toggle = false;
+//     }
+//   }
+// });
