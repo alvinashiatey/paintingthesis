@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title or metadata.title}}</title>
-    <link rel="preload" as="font" {% if page.url == '/' or page.url == '/info.html'%}  href="assets/font/Century-BookCondensed.ttf" {% else %} href="./../assets/font/Century-BookCondensed.ttf" {% endif %} type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" as="font" {% if page.url == '/' or page.url == '/info.html'%}  href="assets/font/Century-BookCondensed.ttf" {% else %} href="../../assets/font/Century-BookCondensed.ttf" {% endif %} type="font/ttf" crossorigin="anonymous">
     <link rel="icon"  {% if page.url == '/'%} href="/assets/images/favicon.png" {% else %} href="../../assets/images/favicon.png" {% endif %} type="image/png" />
     {% block scriptLink %}{% endblock %}
     {% if build.env == "production" %}
