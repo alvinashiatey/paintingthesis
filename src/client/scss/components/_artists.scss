@@ -64,6 +64,7 @@
     @media screen and (max-width: 60em) {
       flex-direction: column;
       padding-inline: 1rem;
+      gap: 2.5rem;
     }
     &.second {
       @media screen and (max-width: 60em) {
