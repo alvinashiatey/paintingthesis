@@ -2,8 +2,7 @@ import * as THREE from "three";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 
-var container, controls, camera, scene, renderer;
-
+var container, camera, scene, renderer;
 var target = new THREE.Vector3(0, 0, 0);
 
 var mouseX = 0,
@@ -13,15 +12,8 @@ var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 
 var object;
-
-var ratio;
-
-var material;
-
 var isMoblie = false;
-
 var zoomingIn = true;
-
 var za = 0;
 
 if (window.innerWidth <= 1050) {
@@ -83,18 +75,12 @@ function init() {
       });
   });
 
-  function onError() {}
-
   renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
   renderer.setClearColor(0xffffff, 0);
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
   container.appendChild(renderer.domElement);
 
-  //     if (isMoblie == false) {
-  // controls = new THREE.OrbitControls(camera, renderer.domElement);
-  // controls.addEventListener("change", render);
-  //     }
   window.addEventListener("resize", onWindowResize, false);
 }
 
@@ -140,19 +126,3 @@ if (canvas) {
   init();
   render();
 }
-
-// let toggle = false;
-// let pa = document.querySelector(".pa");
-// let group = document.querySelector(".artist__groups");
-// pa.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   if (isMoblie == false) {
-//     if (toggle == false) {
-//       group.style.display = "block";
-//       toggle = true;
-//     } else {
-//       group.style.display = "none";
-//       toggle = false;
-//     }
-//   }
-// });

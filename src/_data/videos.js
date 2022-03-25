@@ -15,7 +15,7 @@ module.exports = async function () {
     }
 
     return arena
-      .channel("ppm-media-7_ey3tydmye")
+      .channel("ppm-media-2")
       .get({ per: 100 })
       .then(async (chan) => {
         chan.contents.map(async (item) => {
