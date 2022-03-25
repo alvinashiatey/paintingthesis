@@ -1,36 +1,37 @@
 {
-  "name": "paintingthesis",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "concurrently npm:dev:*",
-    "dev:eleventy": "eleventy --serve",
-    "dev:vite": "vite",
-    "build": "npm run build:vite && npm run build:eleventy",
-    "build:eleventy": "NODE_ENV=production eleventy",
-    "build:vite": "NODE_ENV=production vite build",
-    "prod": "NODE_ENV=production npm run build && serve _site"
-  },
-  "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-cache-assets": "^2.3.0",
-    "@11ty/eleventy-img": "^1.0.0",
-    "@vitejs/plugin-legacy": "^1.6.4",
-    "are.na": "^0.1.5",
-    "concurrently": "^6.5.1",
-    "dotenv": "^10.0.0",
-    "html-minifier": "^4.0.0",
-    "markdown-it": "^12.3.0",
-    "sass": "^1.45.1",
-    "serve": "^13.0.2",
-    "vite": "^2.7.10"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "three": "^0.136.0",
-    "sharp": "^0.29.3"
-  }
+        "name": "paintingthesis",
+        "version": "1.0.0",
+        "description": "",
+        "main": "index.js",
+        "scripts": {
+                "dev": "concurrently npm:dev:*",
+                "dev:eleventy": "eleventy --serve",
+                "dev:vite": "vite",
+                "build": "npm run build:imagePath && npm run build:vite && npm run build:eleventy",
+                "build:eleventy": "NODE_ENV=production eleventy",
+                "build:vite": "NODE_ENV=production vite build",
+                "build:imagePath": "NODE_ENV=production node ./helper/imagePath.js",
+                "prod": "NODE_ENV=production npm run build && serve _site"
+        },
+        "devDependencies": {
+                "@11ty/eleventy": "^0.12.1",
+                "@11ty/eleventy-cache-assets": "^2.3.0",
+                "@11ty/eleventy-img": "^1.0.0",
+                "@vitejs/plugin-legacy": "^1.6.4",
+                "are.na": "^0.1.5",
+                "concurrently": "^6.5.1",
+                "dotenv": "^10.0.0",
+                "html-minifier": "^4.0.0",
+                "markdown-it": "^12.3.0",
+                "sass": "^1.45.1",
+                "serve": "^13.0.2",
+                "vite": "^2.7.10"
+        },
+        "keywords": [],
+        "author": "",
+        "license": "ISC",
+        "dependencies": {
+                "three": "^0.136.0",
+                "sharp": "^0.29.3"
+        }
 }
