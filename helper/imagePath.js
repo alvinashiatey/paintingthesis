@@ -72,9 +72,14 @@ let arena = new Arena({
         }
 })();
 
-function getCaption(fileName, path) {
+function getCaption(fileName, src) {
         let res;
-        let fName = fileName.split("-").join(" ");
+        let fName;
+        if (handleZoila(fileName)) {
+                fName = handleZoila(fileName);
+        } else {
+                fName = fileName.split("-").join(" ");
+        }
         let images = artists.map((artist) => {
                 return artist.images;
         });
@@ -85,10 +90,22 @@ function getCaption(fileName, path) {
                         images[imageKey] = {
                                 name: imageKey,
                                 caption: caption,
-                                path
+                                src
                         };
                         res = images[imageKey];
                 }
         }
         return res;
+}
+
+function handleZoila(fileName) {
+        let z;
+        let fName = fileName.split("-");
+        if (fName.includes("zoila")) {
+                // hyphenate just the last word in fName
+                let lastWord = fName.pop();
+                z = fName.join(" ") + "-" + lastWord;
+                return z;
+        }
+        return false;
 }

@@ -1,11 +1,48 @@
 .slide__conatiner {
-        // width: 76vw;
-        // height: 76vh;
+        max-width: 100vw;
+        height: 77vh;
         z-index: 999;
         position: relative;
-        border-radius: 50%;
         overflow: hidden;
-        margin: 0 auto;
+        .img-container {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                padding-top: 1rem;
+                padding-inline: 2rem;
+                @media screen and (max-width: 60em) {
+                        padding-inline: 1rem;
+                }
+                .text-wrapper {
+                        height: auto;
+                        display: flex;
+                        justify-content: space-between;
+                        @media screen and (max-width: 60em) {
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                .caption {
+                                        text-align: left;
+                                }
+                        }
+                        .caption-div {
+                                width: 80%;
+                                text-align: right;
+                        }
+                }
+                .img-wrapper {
+                        width: 100%;
+                        height: 95%;
+                        cursor: e-resize;
+
+                        img {
+                                border-radius: 2.5rem;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                        }
+                }
+        }
 }
 .home {
         width: 100%;
@@ -15,7 +52,6 @@
         flex-direction: column;
         justify-content: space-between;
         padding-bottom: 0.5rem;
-        // font-size: 1.75rem;
         padding-inline: 2rem;
         @media screen and (max-width: 60em) {
                 padding-inline: 1rem;

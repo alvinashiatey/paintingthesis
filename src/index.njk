@@ -8,9 +8,10 @@ cssContent: '@font-face { font-family: "Century-BookCondensed"; src: url(assets/
 </div>
 <canvas id="c" class="vm_canvas"></canvas>
 <div class="home">
+  
   <div class="home__header">
     <div class="home__link">
-        <a href="/"><h1>Vibrant Matters</h1> </a>
+        <a href="#top"><h1>Vibrant Matters</h1> </a>
         {# <h1 class="curated">Curated by Melanie Kress and Rachelle Dang</h1> #}
     </div>
     <div class="ppte">
@@ -22,12 +23,13 @@ cssContent: '@font-face { font-family: "Century-BookCondensed"; src: url(assets/
   </div>
 
   <div class="groups">
+  <a id="top"></a>
   <h2 class="pa">Participating Artists</h2>
   </br>
     <div class="artist__groups">
       <div class="group__1">
         <div class="date">
-          <h2>Group I:<wbr> Jan 31-Feb 10, 2022<wbr></h2>
+          <h2>Group I:</h2>
         </div>
         <div class="g__artists">
           {%- for artist in collections.artists %}
@@ -41,7 +43,7 @@ cssContent: '@font-face { font-family: "Century-BookCondensed"; src: url(assets/
       </div>
       <div class="group__2">
         <div class="date">
-          <h2>Group II:<wbr> Feb 22-Mar 4, 2022<wbr></h2>
+          <h2>Group II:</h2>
         </div>
         <div class="g__artists">
           {%- for artist in collections.artists %}
