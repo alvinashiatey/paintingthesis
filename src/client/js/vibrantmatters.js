@@ -139,11 +139,15 @@ let slide = document.querySelector(".slide__container");
 
 if (canvas) {
         init();
-        check = setInterval(function () {
-                if (slide.style.transform == "scale(0)") {
-                        console.log("gone");
-                        render();
-                        clearInterval(check);
-                }
-        }, 1000);
+        if (isMoblie == false) {
+                check = setInterval(function () {
+                        if (slide.style.transform == "scale(0)") {
+                                console.log("gone");
+                                render();
+                                clearInterval(check);
+                        }
+                }, 1000);
+        } else {
+                render();
+        }
 }
