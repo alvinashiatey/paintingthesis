@@ -1,113 +1,169 @@
-.home {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 0.5rem;
-  // font-size: 1.75rem;
-  padding-inline: 2rem;
-  @media screen and (max-width: 60em) {
-    padding-inline: 1rem;
-    // font-size: 1.2rem;
-  }
-
-  .home__header {
-    padding-top: 1.25rem;
-    // --header_height: 3rem;
-    // columns: 3;
-    display: grid;
-    grid-template-columns: 1fr 0.7fr 0.25fr;
-    .home__info {
-      justify-self: end;
-    }
-    .home__link {
-      a {
-        h1 {
-          display: inline;
-        }
-      }
-    }
-
-    @media screen and (max-width: 60em) {
-      grid-template-columns: 1fr;
-      gap: 0.75rem;
-      .home__info {
-        justify-self: start;
-      }
-    }
-  }
-  .groups {
-    margin-top: 2rem;
-    .artist__groups {
-      margin-block-end: 2rem;
-      width: 100%;
-      columns: 2;
-      // display: none;
-      @media screen and (max-width: 60em) {
-        display: block;
-      }
-      @media screen and (max-width: 60em) {
-        columns: 1;
-        padding-block-end: 1.5rem;
-        .group__1,
-        .group__2 {
-          margin-top: 2rem;
-          .date {
-            margin-bottom: 1rem;
-          }
-        }
-      }
-      .g__artists {
-        padding-inline-start: 1.8rem;
-        counter-reset: artist;
-        @media screen and (max-width: 60em) {
-          padding-inline-start: 0rem;
-        }
-        // display: none;
-      }
-      a {
-        h5 {
-          padding: 0;
-          margin: 0;
-        }
-      }
-      .artist {
-        // display: inline-block;
-        float: left;
-        clear: both;
-        line-height: 120%;
-        display: flex;
-
+.slide__container {
+        max-width: 100vw;
+        height: 77vh;
+        z-index: 99;
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+        animation: blur_in 3s cubic-bezier(0.61, 0, 0.36, 1);
         @media screen and (max-width: 40em) {
-          &::before {
-            content: counter(artist);
-            counter-increment: artist;
-            display: inline-block;
-            width: 1.5rem;
-            text-align: center;
-            font-size: 1.5rem;
-            line-height: 1.5rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            border-radius: 0.25rem;
-            background-color: #fff;
-            color: #000;
-          }
+                display: none;
         }
+        .img-container {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                padding-top: 1rem;
+                padding-inline: 2rem;
+                @media screen and (max-width: 60em) {
+                        padding-inline: 1rem;
+                }
+                .text-wrapper {
+                        height: auto;
+                        display: flex;
+                        justify-content: space-between;
+                        @media screen and (max-width: 60em) {
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                .caption {
+                                        text-align: left;
+                                }
+                        }
+                        .caption-div {
+                                width: 80%;
+                                text-align: right;
+                        }
+                }
+                .img-wrapper {
+                        width: 100%;
+                        height: 95%;
+                        cursor: e-resize;
+                        border-radius: 2.5rem;
+                        background-color: #fff;
+                }
+        }
+}
+.home {
+        z-index: 999;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 0.5rem;
+        padding-inline: 2rem;
         @media screen and (max-width: 60em) {
-          padding-block-end: 0.2rem;
-          margin-inline-start: 0;
+                padding-inline: 1rem;
+                // font-size: 1.2rem;
         }
-      }
-      .group__1 {
-        display: inline-block;
-      }
-    }
-  }
-  .curated {
-    font-size: 1.55rem;
-    padding-top: 1.3rem;
-  }
+
+        .home__header {
+                padding-top: 1.25rem;
+                // --header_height: 3rem;
+                // columns: 3;
+                display: grid;
+                grid-template-columns: 1fr 0.7fr 0.25fr;
+                .home__info {
+                        justify-self: end;
+                }
+                .home__link {
+                        a {
+                                h1 {
+                                        display: inline;
+                                }
+                        }
+                }
+
+                @media screen and (max-width: 60em) {
+                        grid-template-columns: 1fr;
+                        gap: 0.75rem;
+                        .home__info {
+                                justify-self: start;
+                        }
+                }
+        }
+        .groups {
+                margin-top: 2rem;
+                .artist__groups {
+                        margin-block-end: 2rem;
+                        width: 100%;
+                        columns: 2;
+                        @media screen and (max-width: 60em) {
+                                display: block;
+                        }
+                        @media screen and (max-width: 60em) {
+                                columns: 1;
+                                padding-block-end: 1.5rem;
+                                .group__1,
+                                .group__2 {
+                                        margin-top: 2rem;
+                                        .date {
+                                                margin-bottom: 1rem;
+                                        }
+                                }
+                        }
+                        .g__artists {
+                                padding-inline-start: 1.8rem;
+                                counter-reset: artist;
+                                @media screen and (max-width: 60em) {
+                                        padding-inline-start: 0rem;
+                                }
+                                // display: none;
+                        }
+                        a {
+                                h5 {
+                                        padding: 0;
+                                        margin: 0;
+                                }
+                        }
+                        .artist {
+                                // display: inline-block;
+                                float: left;
+                                clear: both;
+                                line-height: 120%;
+                                display: flex;
+
+                                @media screen and (max-width: 40em) {
+                                        &::before {
+                                                content: counter(artist);
+                                                counter-increment: artist;
+                                                display: inline-block;
+                                                width: 1.5rem;
+                                                text-align: center;
+                                                font-size: 1.5rem;
+                                                line-height: 1.5rem;
+                                                margin-right: 0.5rem;
+                                                margin-bottom: 0.5rem;
+                                                border-radius: 0.25rem;
+                                                // background-color: #fff;
+                                                color: #000;
+                                        }
+                                }
+                                @media screen and (max-width: 60em) {
+                                        padding-block-end: 0.2rem;
+                                        margin-inline-start: 0;
+                                }
+                        }
+                        .group__1 {
+                                display: inline-block;
+                        }
+                }
+        }
+        .curated {
+                font-size: 1.55rem;
+                padding-top: 1.3rem;
+        }
+}
+
+@keyframes blur_in {
+        from {
+                filter: blur(5px) hue-rotate(90deg);
+                opacity: 0;
+        }
+        to {
+                filter: blur(0px) hue-rotate(0deg);
+                opacity: 1;
+        }
 }
