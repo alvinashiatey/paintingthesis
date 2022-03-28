@@ -66,8 +66,21 @@ class PixelSlider {
                                 100,
                                 0
                         );
+                        let webkitScaleValue = this.map(
+                                scaleValue,
+                                100,
+                                0,
+                                1,
+                                0
+                        );
+                        console.log(scaleValue);
                         this.container.style.transformOrigin = "top center";
                         this.container.style.transform = `scaleY(${scaleValue}%)`;
+                        // webkit-transform version
+                        this.container.style.webkitTransformOrigin =
+                                "top center";
+                        this.container.style.webkitTransform = `scale(${webkitScaleValue})`;
+
                         if (scaleValue === 0) {
                                 this.container.remove();
                                 this.mainDiv.removeEventListener(
