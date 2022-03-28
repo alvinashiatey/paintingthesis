@@ -822,7 +822,7 @@
     },
     {
       "name": "02 Samantha Joy Groff",
-      "caption": "installation view, 2022. Photo: Allison Minto.",
+      "caption": "Installation view, 2022. Photo: Allison Minto.",
       "src": "artists/samantha-joy-groff/images/02-samantha-joy-groff.jpg"
     },
     {
@@ -842,7 +842,7 @@
     },
     {
       "name": "04 Samantha Joy Groff",
-      "caption": "installation view, 2022. Photo: Meghan Olson.",
+      "caption": "Installation view, 2022. Photo: Meghan Olson.",
       "src": "artists/samantha-joy-groff/images/04-samantha-joy-groff.jpg"
     },
     {
@@ -871,11 +871,6 @@
       "src": "artists/brett-ginsburg/images/04-brett-ginsburg.jpg"
     },
     {
-      "name": "01 Brett Ginsburg",
-      "caption": "A Proposal for Story Outlines, 2022. PLA print, primer, epoxy dust, chalk line; form dimensions 18.5 x 9.25 x 1.5 in. Photo courtesy the artist.",
-      "src": "artists/brett-ginsburg/images/01-brett-ginsburg.jpg"
-    },
-    {
       "name": "02 Brett Ginsburg",
       "caption": "A Proposal for Story Outlines, 2022. PLA print, primer, epoxy dust, chalk line; form dimensions 18.5 x 9.25 x 1.5 in. Photo: Meghan Olson.",
       "src": "artists/brett-ginsburg/images/02-brett-ginsburg.jpg"
@@ -899,6 +894,11 @@
       "name": "07 Brett Ginsburg",
       "caption": "Compression Point, 2022. Acrylic on burlap; 79 x 63 in. Photo: Meghan Olson.",
       "src": "artists/brett-ginsburg/images/07-brett-ginsburg.jpg"
+    },
+    {
+      "name": "01 Brett Ginsburg",
+      "caption": "A Proposal for Story Outlines, 2022. PLA print, primer, epoxy dust, chalk line; form dimensions 18.5 x 9.25 x 1.5 in. Photo courtesy the artist.",
+      "src": "artists/brett-ginsburg/images/01-brett-ginsburg.jpg"
     },
     {
       "name": "03 Opal Ecker DeRuvo",
