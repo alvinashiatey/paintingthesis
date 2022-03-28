@@ -4,14 +4,14 @@
         "description": "",
         "main": "index.js",
         "scripts": {
-                "dev": "concurrently pnpm:dev:*",
+                "dev": "concurrently npm:dev:*",
                 "dev:eleventy": "eleventy --serve",
                 "dev:vite": "vite",
-                "build": "pnpm 'build:imagePath' && pnpm 'build:vite' && pnpm 'build:eleventy'",
+                "build": "npm run 'build:imagePath' && npm run 'build:vite' && npm run 'build:eleventy'",
                 "build:eleventy": "NODE_ENV=production eleventy",
                 "build:vite": "NODE_ENV=production vite build",
                 "build:imagePath": "NODE_ENV=production node ./helper/imagePath.js",
-                "prod": "NODE_ENV=production pnpm build && serve _site"
+                "prod": "NODE_ENV=production npm run build && serve _site"
         },
         "devDependencies": {
                 "@11ty/eleventy": "^0.12.1",
