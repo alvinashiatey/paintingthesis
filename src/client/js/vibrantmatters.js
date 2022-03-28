@@ -137,14 +137,6 @@ document.addEventListener("mousemove", onDocumentMouseMove);
 let check;
 let slide = document.querySelector(".slide__container");
 
-check = setInterval(function () {
-        if (slide.style.transform == "scale(0)") {
-                console.log("gone");
-                render();
-                clearInterval(check);
-        }
-}, 1000);
-
 if (canvas) {
         init();
         check = setInterval(function () {
