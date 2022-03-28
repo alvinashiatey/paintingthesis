@@ -73,7 +73,6 @@ class PixelSlider {
                                 1,
                                 0
                         );
-                        console.log(scaleValue);
                         this.container.style.transformOrigin = "top center";
                         this.container.style.transform = `scaleY(${scaleValue}%)`;
                         // webkit-transform version
