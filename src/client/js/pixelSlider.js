@@ -8,8 +8,16 @@ class PixelSlider {
                 } else if (container instanceof HTMLDivElement) {
                         this.container = container;
                 }
-                this.handleOutOfWindow();
+                this.mainDiv = document.querySelector("main");
+                if (!this.container) return;
+                if (this.isMobile()) return;
+                this.handleOnScrollAnimation();
+                this.#headerSmoothScroll();
                 this.init();
+        }
+
+        isMobile() {
+                return window.innerWidth < 600;
         }
 
         init() {
@@ -28,8 +36,60 @@ class PixelSlider {
                         });
         }
 
+        #headerSmoothScroll() {
+                let containerTop = this.container.offsetTop;
+                let containerBottom =
+                        containerTop + this.container.offsetHeight;
+                let headerLink = document.querySelector(".home__link a");
+                headerLink.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        let target = headerLink.getAttribute("href");
+                        let targetPosition =
+                                document.querySelector(target).offsetTop;
+                        this.mainDiv.scrollTo({
+                                top: containerBottom,
+                                behavior: "smooth"
+                        });
+                });
+        }
+
+        handleOnScrollAnimation() {
+                let containerTop = this.container.offsetTop;
+                let containerBottom =
+                        containerTop + this.container.offsetHeight;
+                let listener = () => {
+                        let scrollTop = Math.ceil(this.mainDiv.scrollTop);
+                        let scaleValue = this.map(
+                                scrollTop,
+                                0,
+                                containerBottom,
+                                100,
+                                0
+                        );
+                        this.container.style.transformOrigin = "top center";
+                        this.container.style.transform = `scaleY(${scaleValue}%)`;
+                        if (scaleValue === 0) {
+                                this.container.remove();
+                                this.mainDiv.removeEventListener(
+                                        "scroll",
+                                        listener
+                                );
+                        }
+                };
+
+                this.mainDiv.addEventListener("scroll", listener);
+        }
+
+        // function that maps value x and y to a range b to y
+        map(x, in_min, in_max, out_min, out_max) {
+                return (
+                        ((x - in_min) * (out_max - out_min)) /
+                                (in_max - in_min) +
+                        out_min
+                );
+        }
+
         handleOutOfWindow() {
-                // use Intersectional Observer to check if this.container is out of window and then remove it
                 let options = {
                         root: null,
                         rootMargin: "0px",
@@ -62,28 +122,47 @@ class PixelSlider {
                 textDiv.appendChild(this.caption(el.caption));
                 imgContainer.appendChild(textDiv);
                 imgDiv.addEventListener("click", () => {
-                        let newRan = Math.floor(
-                                Math.random() * this.images.length
-                        );
-                        let newEl = this.images[newRan];
-                        imgContainer.querySelector("img").src = newEl.src;
-                        imgContainer.querySelector(".caption").innerHTML =
-                                this.#handleCaption(newEl.caption);
-                        imgContainer.querySelector(".artist-name").innerHTML =
-                                this.#handleArtistName(newEl.name);
-                        this.images.splice(newRan, 1);
-                        if (!this.images.length) this.init();
+                        imgDiv.style.backgroundImage = `url(${this.interimImage.src})`;
+                        this.container.querySelector(".caption").innerHTML =
+                                this.interimImage.caption;
+                        this.container.querySelector(".artist-name").innerHTML =
+                                this.interimImage.name;
+                        this.container.querySelector(".artist-name").href =
+                                this.#handleArtistUrl(this.interimImage.name);
+                        this.interimImage = this.nextImage();
                 });
                 this.images.splice(randomIndex, 1);
+                let interimDiv = document.createElement("div");
+                interimDiv.classList.add("interim-wrapper");
+                this.container.appendChild(interimDiv);
+                this.interimImage = this.nextImage();
                 return imgContainer;
+        }
+
+        nextImage() {
+                let randomIndex = Math.floor(
+                        Math.random() * this.images.length
+                );
+                let imageDiv = document.querySelector(".interim-wrapper");
+                let el = this.images[randomIndex];
+                imageDiv.style.backgroundImage = `url(${el.src})`;
+                this.images.splice(randomIndex, 1);
+                if (!this.images.length) this.init();
+                return {
+                        el: imageDiv,
+                        src: el.src,
+                        caption: this.#handleCaption(el.caption),
+                        name: this.#handleArtistName(el.name)
+                };
         }
 
         image(src) {
                 let imgDiv = document.createElement("div");
                 imgDiv.classList.add("img-wrapper");
-                let img = document.createElement("img");
-                img.src = src;
-                imgDiv.appendChild(img);
+                imgDiv.style.backgroundImage = `url(${src})`;
+                imgDiv.style.backgroundSize = "cover";
+                imgDiv.style.backgroundPosition = "center";
+                imgDiv.style.backgroundRepeat = "no-repeat";
                 return imgDiv;
         }
 
@@ -105,11 +184,7 @@ class PixelSlider {
                 // remove the first element of the array and add it to the artist name
                 name = this.#handleArtistName(name);
                 artistATag.innerHTML = name;
-                artistATag.href = `artists/${name
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-")}/`;
-
+                artistATag.href = this.#handleArtistUrl(name);
                 artistDiv.appendChild(artistATag);
                 return artistDiv;
         }
@@ -123,7 +198,11 @@ class PixelSlider {
                 nameArr.shift();
                 return nameArr.join(" ");
         }
+
+        #handleArtistUrl(name) {
+                return `artists/${name.toLowerCase().split(" ").join("-")}/`;
+        }
 }
 
-const slider = document.querySelector(".slide__conatiner");
+const slider = document.querySelector(".slide__container");
 const pixelSlider = new PixelSlider(slider);

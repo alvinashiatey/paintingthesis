@@ -28,6 +28,12 @@ eleventyComputed:
     {%- if artist.group == 2 -%}
       <div class="artist__works">
         <div class="works">
+          {%- if artist.youtube -%}
+            <div class="artist__video">
+              <iframe width="100%" height="315" src="{{ artist.youtube.link }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <p class="caption">{{artist.youtube.caption}}</p>
+            </div>
+          {%- endif -%}
           {%- for key, caption in artist.images -%}
             {% set src = "images/" + key.split(" ").join("-").toLowerCase().trim() + ".jpg" %}
             <div class="artist__img">
@@ -72,12 +78,15 @@ eleventyComputed:
             {% if artist.social.web.url %}
               <a href="{{artist.social.web.url}}" target="_blank">{{artist.social.web.name}}</a>
             {% endif %}
+            {% if artist.social.email %}
+              <a href="mailto:{{artist.social.email}}?subject='Vibrant Matter'" >{{artist.social.email}}</a>
+            {% endif %}
               </div>
           </div>
         </div>
       </div> 
     {%- else -%}
-      <div class="artist__container">
+      <div class="artist__container {% if artist.name == "Justin James Voiss"  %}justin{% endif %}">
         <div class="artist__wrapper">
           <div class="artist__name">
             <h1>{{artist.name}}</h1>
@@ -92,7 +101,7 @@ eleventyComputed:
           </div>
           {% if artist.bio %}
             <div class="artist__bio">
-              {% set bio = artist.bio | replace('//n', '<br>') %}
+              {% set bio = artist.bio | replace('//n', '<br>') | replace('${span}', '<span>') | replace('${/span}', '</span>') %}
               <p>{{ bio | safe }}</p>
             </div>
           {% endif %}
@@ -106,6 +115,9 @@ eleventyComputed:
           {% endif %}
           {% if artist.social.web.url %}
             <a href="{{artist.social.web.url}}" target="_blank">{{artist.social.web.name}}</a>
+          {% endif %}
+          {% if artist.social.email %}
+            <a href="{{artist.social.email}}" target="_blank">{{artist.social.email}}</a>
           {% endif %}
             </div>
           </div>
