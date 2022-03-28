@@ -128,4 +128,5 @@ _site
 
 .DS_Store
 src/.DS_Store
-_site/index.html
+.vscode
+_site
