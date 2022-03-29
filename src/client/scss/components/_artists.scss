@@ -6,6 +6,7 @@
                 overflow: auto;
                 height: auto;
         }
+
         /* Portrait and Landscape  */
         @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
                 overflow: auto;
@@ -24,6 +25,7 @@
                 @media screen and (max-width: 40em) {
                         padding: 0 0 1rem 1rem;
                         display: block;
+                        margin-bottom: var(--header_height);
                 }
         }
 
