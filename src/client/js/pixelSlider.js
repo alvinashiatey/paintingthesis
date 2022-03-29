@@ -80,12 +80,16 @@ class PixelSlider {
                                 "top center";
                         this.container.style.webkitTransform = `scale(${webkitScaleValue})`;
 
-                        if (scaleValue <= 0) {
-                                let currentOffset = this.container.offsetTop - this.mainDiv.scrollTop;
+                        if (scaleValue <= 2) {
+                                let currentOffset =
+                                        this.container.offsetTop -
+                                        this.mainDiv.scrollTop;
                                 this.container.remove();
                                 // mainting scroll position
                                 this.mainDiv.scrollTo({
-                                        top: this.container.offsetTop - currentOffset,
+                                        top:
+                                                this.container.offsetTop -
+                                                currentOffset,
                                         behavior: "smooth"
                                 });
                                 this.mainDiv.removeEventListener(
@@ -102,7 +106,7 @@ class PixelSlider {
         map(x, in_min, in_max, out_min, out_max) {
                 return (
                         ((x - in_min) * (out_max - out_min)) /
-                        (in_max - in_min) +
+                                (in_max - in_min) +
                         out_min
                 );
         }
