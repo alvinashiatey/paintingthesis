@@ -32,12 +32,18 @@ dd {
 /* Set core root defaults */
 html {
         scroll-behavior: smooth;
-        height: -webkit-fill-available;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height: fill-available;
+        overflow: hidden;
 }
 
 /* Set core body defaults */
 body {
         min-height: 100vh;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height: fill-available;
         text-rendering: optimizeSpeed;
         line-height: 1.5;
 }
