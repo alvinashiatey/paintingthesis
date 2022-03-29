@@ -58,10 +58,6 @@
                 padding-inline: 1rem;
                 // font-size: 1.2rem;
         }
-        @media screen and (max-width: 40em) {
-                padding-block-end: 5rem;
-                // font-size: 1rem;
-        }
 
         .home__header {
                 padding-top: 1.25rem;
@@ -94,10 +90,11 @@
                         margin-block-end: 2rem;
                         width: 100%;
                         columns: 2;
-                        @media screen and (max-width: 60em) {
-                                display: block;
+                        @media screen and (max-width: 40em) {
+                                padding-block-end: 3rem;
                         }
                         @media screen and (max-width: 60em) {
+                                display: block;
                                 columns: 1;
                                 padding-block-end: 1.5rem;
                                 .group__1,
