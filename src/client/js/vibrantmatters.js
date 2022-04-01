@@ -49,8 +49,8 @@ function init() {
                         var percentComplete = (xhr.loaded / xhr.total) * 100;
                         console.log(
                                 "model " +
-                                        Math.round(percentComplete, 2) +
-                                        "% downloaded"
+                                Math.round(percentComplete, 2) +
+                                "% downloaded"
                         );
                 }
         }
@@ -141,7 +141,7 @@ if (canvas) {
         init();
         if (isMoblie == false) {
                 check = setInterval(function () {
-                        if (slide.style.transform == "scale(0)") {
+                        if (!slide) {
                                 console.log("gone");
                                 render();
                                 clearInterval(check);
