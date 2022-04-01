@@ -141,7 +141,7 @@ if (canvas) {
         init();
         if (isMoblie == false) {
                 check = setInterval(function () {
-                        if (!slide) {
+                        if (slide.style.transform === "scale(0)") {
                                 console.log("gone");
                                 render();
                                 clearInterval(check);
