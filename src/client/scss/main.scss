@@ -48,7 +48,7 @@ body {
                 background-repeat: no-repeat;
                 background-position: center;
                 filter: hue-rotate(5deg) saturate(250%) contrast(175%);
-                z-index: 99;
+                z-index: 9999;
                 pointer-events: none;
                 // @media screen and (max-width: 60em) {
                 //   position: relative;
